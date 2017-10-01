@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>WeddingMakeupArtist</title>
+  <title>Jana Jurakova Wedding Makup Artist</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.png">
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Initialize Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyDcCGZLFCap7O4uYIPJ4dzT0AO4kBG3A0Q",
+      authDomain: "jana-jurakova-makup-artist.firebaseapp.com",
+      databaseURL: "https://jana-jurakova-makup-artist.firebaseio.com",
+      projectId: "jana-jurakova-makup-artist",
+      storageBucket: "jana-jurakova-makup-artist.appspot.com",
+      messagingSenderId: "48435006149"
+    };
+    firebase.initializeApp(config);
+  </script>
 </head>
 <body>
   <app-root></app-root>
