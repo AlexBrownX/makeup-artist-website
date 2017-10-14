@@ -1,22 +1,3 @@
-.introduction {
-    padding-top: 10px;
-}
-
-.jumbotron {
-    // text-shadow: 1px 1px 1px white;
-    background-size: cover;
-    background-position: top;
-    background-image: url("../assets/viera_main_mobile.png");
-    background-image: linear-gradient(rgb(255, 255, 255), rgba(255,255,255, .1)), url("../assets/viera_main_mobile.png");
-}
-
-@media only screen and (min-width: 768px) {
-    .jumbotron {
-       background-image: url("../assets/viera_main.png");
-       background-image: linear-gradient(rgb(255, 255, 255), rgba(255,255,255, .1)), url("../assets/viera_main.png");
-    }
-}
-
 .navbar-brand-image {
     height: 100%;
 }
