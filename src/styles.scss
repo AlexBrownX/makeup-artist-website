@@ -3,24 +3,14 @@ $font-path: "./assets/fonts/";
 html,
 body {
     min-width: 320px;
-    // font-family: 'HaloHandletter';
     // font-family: 'Balqis';
-    // font-family: 'BrotherhoodScript';
+}
+
+.instagram-media {
+    margin: 0 auto !important;
 }
 
 /* TODO - Donationware */
-@font-face {
-    font-family: 'HaloHandletter';
-    src: url('#{$font-path}HaloHandletter/HaloHandletter.eot');
-    src: url('#{$font-path}HaloHandletter/HaloHandletter.woff2') format('woff2'),
-            url('#{$font-path}HaloHandletter/HaloHandletter.woff') format('woff'),
-            url('#{$font-path}HaloHandletter/HaloHandletter.ttf') format('truetype'),
-            url('#{$font-path}HaloHandletter/HaloHandletter.svg#HaloHandletter') format('svg'),
-            url('#{$font-path}HaloHandletter/HaloHandletter.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @font-face {
     font-family: 'Balqis';
     src: url('#{$font-path}/Balqis/Balqis.eot');
@@ -32,17 +22,3 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
-@font-face {
-    font-family: 'BrotherhoodScript';
-    src: url('#{$font-path}/BrotherhoodScript/BrotherhoodScript.eot');
-    src: url('#{$font-path}/BrotherhoodScript/BrotherhoodScript.woff2') format('woff2'),
-         url('#{$font-path}/BrotherhoodScript/BrotherhoodScript.woff') format('woff'),
-         url('#{$font-path}/BrotherhoodScript/BrotherhoodScript.ttf') format('truetype'),
-         url('#{$font-path}/BrotherhoodScript/BrotherhoodScript.svg#BrotherhoodScript') format('svg'),
-         url('#{$font-path}/BrotherhoodScript/BrotherhoodScript.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  

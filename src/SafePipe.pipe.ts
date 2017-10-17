@@ -11,13 +11,13 @@ export class SafePipe implements PipeTransform {
   constructor(protected _sanitizer: DomSanitizer) { }
 
   public transform(value: string, type: string): SafeHtml | SafeStyle | SafeScript | SafeUrl | SafeResourceUrl {
-    console.log('Transforming: ' + type);
-    console.log('Value: ' + value);
+    // console.log('Transforming: ' + type);
+    // console.log('Value: ' + value);
 
     switch (type) {
       case 'html':
         const safeValue = this._sanitizer.bypassSecurityTrustHtml(value);
-        console.log('Safe Value: ' + safeValue);
+        // console.log('Safe Value: ' + safeValue);
         return safeValue;
       case 'style':
         return this._sanitizer.bypassSecurityTrustStyle(value);

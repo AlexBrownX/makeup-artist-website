@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { JsonpModule, Jsonp, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-gallery-page',
@@ -8,14 +11,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GalleryPageComponent implements OnInit {
 
+  apiRoot = 'https://api.instagram.com/oembed/?url=http://instagr.am/p/BaUvvg0nOMI/?OMITSCRIPT=true&callback=JSONP_CALLBACK';
   galleryHtml: String;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private jsonp: Jsonp) {}
 
   ngOnInit() {
-    this.http.get('https://api.instagram.com/oembed/?url=http://instagr.am/p/BaUvvg0nOMI?OMITSCRIPT=true').subscribe(data => {
+    this.getGalleryImage().subscribe(data => {
       console.dir(data);
       this.galleryHtml = data['html'];
     });
+  }
+
+  getGalleryImage(): Observable<any[]> {
+    return this.jsonp.get(this.apiRoot)
+      .map(function(res: Response) {
+          return res.json() || {};
+      }).catch(function(error: any) {
+        return Observable.throw(error);
+      });
   }
 }
