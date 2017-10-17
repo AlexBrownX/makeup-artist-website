@@ -1,0 +1,3 @@
+<div class="container">
+  <div *ngIf="galleryHtml;" class="text-center" [innerHTML]="galleryHtml | safe: 'html'"></div>
+</div>
