@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { JsonpModule, Jsonp, Response } from '@angular/http';
+import { JsonpModule } from '@angular/http';
 
 import { WelcomePageComponent } from '../welcome-page/welcome-page.component';
 import { AboutMePageComponent } from '../about-me-page/about-me-page.component';
@@ -55,7 +54,6 @@ const appRoutes: Routes = [
 ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     JsonpModule,
     RouterModule.forRoot( appRoutes )
   ],
