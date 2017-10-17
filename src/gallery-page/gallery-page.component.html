@@ -1,3 +1,4 @@
 <div class="container">
-  <div *ngIf="galleryHtml;" class="text-center" [innerHTML]="galleryHtml | safe: 'html'"></div>
+  <!-- <img *ngIf="galleryThumbnailHtml;"  [ngStyle]="{'width': thumbnailWidth + 'px'}" class="img-responsive center-block gallery-thumbnail" [src]="galleryThumbnailHtml | safe: 'url'"> -->
+  <div *ngIf="galleryHtml;" class="instagram-media" [innerHTML]="galleryHtml | safe: 'html'"></div>
 </div>

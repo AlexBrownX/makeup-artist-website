@@ -3,22 +3,17 @@ $font-path: "./assets/fonts/";
 html,
 body {
     min-width: 320px;
-    // font-family: 'Balqis';
 }
 
-.instagram-media {
-    margin: 0 auto !important;
-}
-
-/* TODO - Donationware */
-@font-face {
-    font-family: 'Balqis';
-    src: url('#{$font-path}/Balqis/Balqis.eot');
-    src: url('#{$font-path}/Balqis/Balqis.woff2') format('woff2'),
-         url('#{$font-path}/Balqis/Balqis.woff') format('woff'),
-         url('#{$font-path}/Balqis/Balqis.ttf') format('truetype'),
-         url('#{$font-path}/Balqis/Balqis.svg#Balqis') format('svg'),
-         url('#{$font-path}/Balqis/Balqis.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+/* TODO - License Find another font */
+// @font-face {
+//     font-family: 'Balqis';
+//     src: url('#{$font-path}/Balqis/Balqis.eot');
+//     src: url('#{$font-path}/Balqis/Balqis.woff2') format('woff2'),
+//          url('#{$font-path}/Balqis/Balqis.woff') format('woff'),
+//          url('#{$font-path}/Balqis/Balqis.ttf') format('truetype'),
+//          url('#{$font-path}/Balqis/Balqis.svg#Balqis') format('svg'),
+//          url('#{$font-path}/Balqis/Balqis.eot?#iefix') format('embedded-opentype');
+//     font-weight: normal;
+//     font-style: normal;
+// }

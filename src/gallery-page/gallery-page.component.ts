@@ -12,13 +12,25 @@ export class GalleryPageComponent implements OnInit {
 
   apiRoot = 'https://api.instagram.com/oembed/?url=http://instagr.am/p/BaUvvg0nOMI/?OMITSCRIPT=true&callback=JSONP_CALLBACK';
   galleryHtml: String;
+  galleryThumbnailHtml: String;
+  thumbnailWidth: Number;
 
   constructor(private jsonp: Jsonp) {}
 
   ngOnInit() {
     this.getGalleryImage().subscribe(data => {
       this.galleryHtml = data['html'];
+      this.galleryThumbnailHtml = data['thumbnail_url'];
+      this.thumbnailWidth = data['thumbnail_width'];
+
+      this.triggerInstagram();
     });
+  }
+
+  triggerInstagram() {
+    if (window['instgrm'] && window['instgrm'].Embeds) {
+      window['instgrm'].Embeds.process();
+    }
   }
 
   getGalleryImage(): Observable<any[]> {
