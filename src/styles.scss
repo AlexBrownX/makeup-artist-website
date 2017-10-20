@@ -7,6 +7,15 @@ body {
     padding-bottom: 10px;
 }
 
+.access {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
 /* TODO - License Find another font */
 // @font-face {
 //     font-family: 'Balqis';
