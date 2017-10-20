@@ -10,6 +10,8 @@ import { NotFoundPageComponent } from '../not-found-page/not-found-page.componen
 import { NavigationComponent } from '../navigation/navigation.component';
 import { FooterComponent } from '../footer/footer.component';
 import { GalleryPageComponent } from '../gallery-page/gallery-page.component';
+import { ReturnSectionComponent } from '../return-section/return-section.component';
+
 import { SafePipe } from '../SafePipe.pipe';
 
 const appRoutes: Routes = [
@@ -50,6 +52,7 @@ const appRoutes: Routes = [
     NavigationComponent,
     FooterComponent,
     GalleryPageComponent,
+    ReturnSectionComponent,
     SafePipe
 ],
   imports: [
