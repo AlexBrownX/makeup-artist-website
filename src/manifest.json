@@ -5,7 +5,6 @@
     "theme_color": "#FF8282",
     "background_color": "white",
     "display": "fullscreen",
-    // Usful for analytics and recognizing where app was launched from
     "start_url": "welcome/?utm_source=homescreen",
     "icons": [{
         "src": "assets/eye_icon/eye_48.png",

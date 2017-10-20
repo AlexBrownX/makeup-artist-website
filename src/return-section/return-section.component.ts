@@ -14,7 +14,7 @@ export class ReturnSectionComponent implements AfterViewInit {
   // Expecting homescreen launches to contain string '?utm_source=homescreen'
   // See manifest.json
   ngAfterViewInit() {
-    const howLaunched = window.location.search.substring(1).split('=')[0];
+    const howLaunched = window.location.search.substring(1).split('=')[1];
 
     if (howLaunched === 'homescreen') {
       this.homescreenLaunch = true;
