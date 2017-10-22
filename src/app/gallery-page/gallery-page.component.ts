@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { slideInDownAnimation } from '../animations';
 import { JsonpModule, Jsonp, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Rx';
@@ -6,9 +7,12 @@ import { Observable } from 'rxjs/Rx';
 @Component({
   selector: 'app-gallery-page',
   templateUrl: './gallery-page.component.html',
-  styleUrls: ['./gallery-page.component.scss']
+  styleUrls: ['./gallery-page.component.scss'],
+  animations: [slideInDownAnimation]
 })
 export class GalleryPageComponent implements OnInit {
+  @HostBinding('@routeAnimation') routeAnimation = true;
+  @HostBinding('style.display')   display = 'block';
 
   instagramRootUrl = 'https://api.instagram.com/oembed/?url=http://instagr.am/p/';
   omitScript = '?OMITSCRIPT=true';

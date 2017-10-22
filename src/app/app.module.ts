@@ -1,72 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { RouterModule, Routes } from '@angular/router';
 import { JsonpModule } from '@angular/http';
-
 import { SafePipe } from './SafePipe.pipe';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { AboutMePageComponent } from './about-me-page/about-me-page.component';
-import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { FooterComponent } from './footer/footer.component';
 import { GalleryPageComponent } from './gallery-page/gallery-page.component';
-import { ReturnSectionComponent } from './return-section/return-section.component';
 import { BookingPageComponent } from './booking-page/booking-page.component';
-
-
-const appRoutes: Routes = [
-  {
-    path: 'welcome',
-    component: WelcomePageComponent,
-    data: {
-      title: 'Jana Jurakove Wedding Makeup Artist'
-    }
-  }, {
-    path: 'about-me',
-    component: AboutMePageComponent,
-    data: {
-      title: 'About Jana'
-    }
-  }, {
-    path: 'gallery',
-    component: GalleryPageComponent,
-    data: {
-      title: 'Gallery'
-    }
-  }, {
-    path: 'bookings',
-    component: BookingPageComponent,
-    data: {
-      title: 'Booking'
-    }
-  }, {
-    path: '',
-    redirectTo: '/welcome',
-    pathMatch: 'full'
-  }, {
-    path: '**',
-    component: NotFoundPageComponent
-  }
-];
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { ReturnSectionComponent } from './return-section/return-section.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     SafePipe,
     AppComponent,
+    NavigationComponent,
     WelcomePageComponent,
     AboutMePageComponent,
-    NotFoundPageComponent,
-    NavigationComponent,
-    FooterComponent,
     GalleryPageComponent,
+    BookingPageComponent,
+    NotFoundPageComponent,
     ReturnSectionComponent,
-    BookingPageComponent
-],
+    FooterComponent
+  ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     JsonpModule,
-    RouterModule.forRoot( appRoutes )
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
