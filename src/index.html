@@ -20,11 +20,7 @@
     <!-- Tells the router how to compose navigation URLs -->
     <base href="/">
 
-    <!-- TODO - Instagram loading order -->
-    <script async="" defer="" src="https://platform.instagram.com/en_US/embeds.js"></script>  
-
     <!-- Initialize Firebase -->
-    <!-- TODO - Use Google API to store details -->
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
     <script>
       var config = {
@@ -36,7 +32,7 @@
         messagingSenderId: "48435006149"
       };
       firebase.initializeApp(config);
-      </script>
+    </script>
   </head>
   <body>
     <noscript>
@@ -46,16 +42,6 @@
 
     <app-root></app-root>
   </body>
-
-  <!-- TODO -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(function(reg){
-          console.debug("Service worker registered.");
-        }).catch(function(err) {
-          console.debug("Service worker NOT registered: " + err);
-        });
-    }
-  </script>
+    <!-- TODO - Instagram loading order -->
+    <script async="" defer="" src="https://platform.instagram.com/en_US/embeds.js"></script>
 </html>

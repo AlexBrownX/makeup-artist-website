@@ -11,7 +11,6 @@
         "assets",
         "favicon.ico",
         "manifest.json",
-        "cache-polyfill.js",
         "service-worker.js"
       ],
       "index": "index.html",

@@ -17,15 +17,21 @@ body {
     overflow: hidden;
 }
 
-/* TODO - License Find another font */
-// @font-face {
-//     font-family: 'Balqis';
-//     src: url('#{$font-path}/Balqis/Balqis.eot');
-//     src: url('#{$font-path}/Balqis/Balqis.woff2') format('woff2'),
-//          url('#{$font-path}/Balqis/Balqis.woff') format('woff'),
-//          url('#{$font-path}/Balqis/Balqis.ttf') format('truetype'),
-//          url('#{$font-path}/Balqis/Balqis.svg#Balqis') format('svg'),
-//          url('#{$font-path}/Balqis/Balqis.eot?#iefix') format('embedded-opentype');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+.accent-color {
+    color: #FF8282;
+}
+
+.accent-border {
+    border: 1px solid #FDC4C4;
+}
+
+.vertical-margin-spaced {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.padded-text {
+    line-height: 30px;
+    font-size: 1.6rem;
+    padding: 10px 0 10px 0;
+}

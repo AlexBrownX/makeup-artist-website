@@ -1,11 +1,33 @@
-.introduction {
-    padding-top: 10px;
+.welcome-image {
+    height: 550px;
+    border-radius: 5px;
+    background: url("../../assets/images/1a.jpg"); 
+    background-position: top;
 }
 
-.jumbotron {
-    // text-shadow: 1px 1px 2px white;
-    background-size: cover;
-    background-position: top;
-    background-image: url("../../assets/images/viera_main_mobile.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255,255,255, 0.6)), url("../../assets/images/viera_main_mobile.jpg");
+header {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.primary-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+}
+
+.secondary-title {
+    color: white;    
+    padding-top: 50px;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 424px) {
+    .welcome-image {
+        height: 750px;
+        background: url("../../assets/images/1b.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
