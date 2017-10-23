@@ -19,6 +19,7 @@ export class BookingPageComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
 
   bookingEndpoint = 'https://us-central1-jana-jurakova-makup-artist.cloudfunctions.net/writeBooking';
+  janaEmailAddress = 'jana.jurakova@yahoo.co.uk';
 
   isSubmitted = false;
   hasError = false;

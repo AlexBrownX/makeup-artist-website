@@ -7,7 +7,7 @@
                 <p class="padded-text">To discuss your requirements or to arrange a meeting, please send me a message using the booking form.</p>
                 
                 <h2 class="accent-color">Email</h2>
-                <p class="padded-text">You can send me an email by <a href="mailto:jana.jurakova@yahoo.co.uk">clicking here</a>.</p>
+                <p class="padded-text">Alternatively you can <a href="mailto:{{janaEmailAddress}}">send me an email</a>.</p>
             </div>
         </div>
 
@@ -22,7 +22,7 @@
                     <div class="form-group" [ngClass]="{ 'has-error': !bookingForm.controls['name'].valid && bookingForm.controls['name'].touched }">
                         <label for="name">Name:</label>
                         <span class="required">*</span>
-                        <input type="text" class="form-control" [formControl]="bookingForm.controls['name']"/>
+                        <input id="name" type="text" class="form-control" [formControl]="bookingForm.controls['name']"/>
 
                         <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['name'].valid && bookingForm.controls['name'].touched">
                             Name is required.
@@ -33,7 +33,7 @@
                     <div class="form-group"  [ngClass]="{ 'has-error':!bookingForm.controls['email'].valid && bookingForm.controls['email'].touched }">
                         <label for="email">Email address:</label>
                         <span class="required">*</span>
-                        <input type="email" class="form-control" [formControl]="bookingForm.controls['email']" />
+                        <input id="email" type="email" class="form-control" [formControl]="bookingForm.controls['email']" />
 
                         <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['email'].valid && bookingForm.controls['email'].touched">
                             Email address is required.
@@ -43,20 +43,20 @@
                     <!-- Telephone -->
                     <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['telephone'].valid && bookingForm.controls['telephone'].touched }">
                         <label for="telephone">Telephone Number:</label>
-                        <input type="tel" class="form-control" [formControl]="bookingForm.controls['telephone']" />
+                        <input id="telephone" type="tel" class="form-control" [formControl]="bookingForm.controls['telephone']" />
                     </div>
 
                     <!-- Subject -->
                     <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['subject'].valid && bookingForm.controls['subject'].touched }">
                         <label for="subject">Subject:</label>
-                        <input type="text" class="form-control" [formControl]="bookingForm.controls['subject']"  />
+                        <input id="subject" type="text" class="form-control" [formControl]="bookingForm.controls['subject']"  />
                     </div>
 
                     <!-- Message -->
                     <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['message'].valid && bookingForm.controls['message'].touched }">
                         <label for="message">Message:</label>
                         <span class="required">*</span>
-                        <textarea class="form-control" rows="5" id="message" [formControl]="bookingForm.controls['message']" ></textarea>
+                        <textarea id="message" class="form-control" rows="5" id="message" [formControl]="bookingForm.controls['message']" ></textarea>
                         
                         <div class="alert alert-danger form-error"  *ngIf="!bookingForm.controls['message'].valid && bookingForm.controls['message'].touched">
                             A message is required.
@@ -67,7 +67,7 @@
                 <!-- Error sending message -->
                 <div *ngIf="hasError;" class="alert alert-danger">
                     <strong>Error sending message.</strong> 
-                    <p>Your message couldn't be sent this time. Please try again later, or <a href="mailto:jana.jurakova@yahoo.co.uk">click here</a> to send me an email.</p>
+                    <p>Your message couldn't be sent this time. Please try again later, or <a href="mailto:{{janaEmailAddress}}">click here</a> to send me an email.</p>
                 </div>
 
                 <!-- Form Error -->
