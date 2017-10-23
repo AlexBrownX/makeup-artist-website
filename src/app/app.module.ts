@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { JsonpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { SafePipe } from './SafePipe.pipe';
+import { ScriptService } from './script-loader.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,10 +34,13 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     JsonpModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ScriptService],
   bootstrap: [AppComponent]
 })
 

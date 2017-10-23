@@ -1,17 +1,22 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
+
 import { JsonpModule, Jsonp, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Rx';
+
+import { ScriptService } from '../script-loader.service';
+import * as globalVars from '../../globals';
 
 @Component({
   selector: 'app-gallery-page',
   templateUrl: './gallery-page.component.html',
   styleUrls: ['./gallery-page.component.scss'],
+  providers: [ScriptService],
   animations: [slideInDownAnimation]
 })
 export class GalleryPageComponent implements OnInit {
-  @HostBinding('@routeAnimation') routeAnimation = true;
+  @HostBinding('@routeAnimation') routeAnimation = globalVars.animationsEnabled;
   @HostBinding('style.display')   display = 'block';
 
   instagramRootUrl = 'https://api.instagram.com/oembed/?url=http://instagr.am/p/';
@@ -30,7 +35,9 @@ export class GalleryPageComponent implements OnInit {
   tempGallery = [];
   completeImageFetches = 0;
 
-  constructor(private jsonp: Jsonp) {}
+  constructor(private jsonp: Jsonp, private scriptService: ScriptService) {
+    scriptService.loadScript('instagram');
+  }
 
   ngOnInit() {
     this.getInstagramImages();

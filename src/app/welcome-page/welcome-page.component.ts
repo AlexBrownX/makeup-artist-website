@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
+import * as globalVars from '../../globals';
 
 @Component({
   selector: 'app-welcome-page',
@@ -8,7 +9,7 @@ import { slideInDownAnimation } from '../animations';
   animations: [slideInDownAnimation]
 })
 export class WelcomePageComponent implements OnInit {
-  @HostBinding('@routeAnimation') routeAnimation = true;
+  @HostBinding('@routeAnimation') routeAnimation = globalVars.animationsEnabled;
   @HostBinding('style.display')   display = 'block';
 
   constructor() {}
