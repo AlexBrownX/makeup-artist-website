@@ -6,7 +6,6 @@ import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Rx';
 
 import { ScriptService } from '../script-loader.service';
-import * as globalVars from '../../globals';
 
 @Component({
   selector: 'app-gallery-page',
@@ -16,7 +15,7 @@ import * as globalVars from '../../globals';
   animations: [slideInDownAnimation]
 })
 export class GalleryPageComponent implements OnInit {
-  @HostBinding('@routeAnimation') routeAnimation = globalVars.animationsEnabled;
+  @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display')   display = 'block';
 
   instagramRootUrl = 'https://api.instagram.com/oembed/?url=http://instagr.am/p/';

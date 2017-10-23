@@ -1,8 +1,6 @@
 /** Global variable definitions */
 'use strict';
 
-export const animationsEnabled = '0';
-
 interface Scripts {
     name: string;
     src: string;

@@ -1,6 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
-import * as globalVars from '../../globals';
 
 @Component({
   selector: 'app-not-found-page',
@@ -10,7 +9,7 @@ import * as globalVars from '../../globals';
 })
 export class NotFoundPageComponent implements OnInit {
   @HostBinding('style.display')   display = 'block';
-  @HostBinding('@routeAnimation') routeAnimation;
+  @HostBinding('@routeAnimation') routeAnimation = true;
 
   constructor() { }
 

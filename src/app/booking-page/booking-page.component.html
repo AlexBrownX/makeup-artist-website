@@ -7,7 +7,7 @@
                 <p class="padded-text">To discuss your requirements or to arrange a meeting, please send me a message using the booking form.</p>
                 
                 <h2 class="accent-color">Email</h2>
-                <p class="padded-text">You can also email me directly <a href="mailto:jana.jurakova@yahoo.co.uk">jana.jurakova@yahoo.co.uk</a></p>
+                <p class="padded-text">You can send me an email by <a href="mailto:jana.jurakova@yahoo.co.uk">clicking here</a>.</p>
             </div>
         </div>
 
@@ -21,6 +21,7 @@
                     <!-- Name -->
                     <div class="form-group" [ngClass]="{ 'has-error': !bookingForm.controls['name'].valid && bookingForm.controls['name'].touched }">
                         <label for="name">Name:</label>
+                        <span class="required">*</span>
                         <input type="text" class="form-control" [formControl]="bookingForm.controls['name']"/>
 
                         <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['name'].valid && bookingForm.controls['name'].touched">
@@ -31,6 +32,7 @@
                     <!-- Email address -->
                     <div class="form-group"  [ngClass]="{ 'has-error':!bookingForm.controls['email'].valid && bookingForm.controls['email'].touched }">
                         <label for="email">Email address:</label>
+                        <span class="required">*</span>
                         <input type="email" class="form-control" [formControl]="bookingForm.controls['email']" />
 
                         <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['email'].valid && bookingForm.controls['email'].touched">
@@ -53,6 +55,7 @@
                     <!-- Message -->
                     <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['message'].valid && bookingForm.controls['message'].touched }">
                         <label for="message">Message:</label>
+                        <span class="required">*</span>
                         <textarea class="form-control" rows="5" id="message" [formControl]="bookingForm.controls['message']" ></textarea>
                         
                         <div class="alert alert-danger form-error"  *ngIf="!bookingForm.controls['message'].valid && bookingForm.controls['message'].touched">
@@ -64,7 +67,12 @@
                 <!-- Error sending message -->
                 <div *ngIf="hasError;" class="alert alert-danger">
                     <strong>Error sending message.</strong> 
-                    <p>Your message couldn't be sent this time. Please try again later, or send me an email. <a href="mailto:jana.jurakova@yahoo.co.uk"><strong>jana.jurakova@yahoo.co.uk</strong></a></p>
+                    <p>Your message couldn't be sent this time. Please try again later, or <a href="mailto:jana.jurakova@yahoo.co.uk">click here</a> to send me an email.</p>
+                </div>
+
+                <!-- Form Error -->
+                <div class="alert alert-warning form-error"  *ngIf="!bookingForm.valid && bookingForm.touched">
+                    Form is incomplete or contains errors.
                 </div>
 
                 <!-- Submit button -->
