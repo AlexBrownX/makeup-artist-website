@@ -6,6 +6,7 @@ import { AboutMePageComponent } from './about-me-page/about-me-page.component';
 import { GalleryPageComponent } from './gallery-page/gallery-page.component';
 import { BookingPageComponent } from './booking-page/booking-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { ReviewPageComponent } from './review-page/review-page.component';
 
 const appRoutes: Routes = [{
     path: 'welcome',
@@ -30,6 +31,12 @@ const appRoutes: Routes = [{
     component: BookingPageComponent,
     data: {
         title: 'Booking'
+    }
+}, {
+    path: 'review',
+    component: ReviewPageComponent,
+    data: {
+        title: 'Review'
     }
 }, {
     path: '',

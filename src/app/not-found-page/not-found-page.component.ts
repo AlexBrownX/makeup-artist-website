@@ -11,8 +11,5 @@ export class NotFoundPageComponent implements OnInit {
   @HostBinding('style.display')   display = 'block';
   @HostBinding('@routeAnimation') routeAnimation = true;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 }

@@ -1,0 +1,20 @@
+$image-size: 275px;
+
+.not-found-page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.not-found-image {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: $image-size;
+    width: $image-size;
+    border-radius: 138px;
+}
+
+.not-found-image-text {
+    line-height: $image-size;
+    color: #ffffff;
+    font-size: 8rem;
+}

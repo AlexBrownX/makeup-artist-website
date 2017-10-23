@@ -1,4 +1,4 @@
-$font-path: "./assets/fonts/";
+$accent-color: #9A0C77;
 
 html,
 body {
@@ -18,11 +18,15 @@ body {
 }
 
 .accent-color {
-    color: #9A0C77;
+    color: $accent-color;
 }
 
 .accent-border {
-    border: 1px solid #FDC4C4;
+    border: 1px solid $accent-color;
+}
+
+.accent-background {
+    background-color: $accent-color;
 }
 
 .vertical-margin-spaced {

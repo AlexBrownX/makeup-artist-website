@@ -40,14 +40,13 @@ export class BookingPageComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-  sendBooking(value: any): void {
+  sendBooking(formValue: any): void {
     this.hasError = false;
 
     this.http
-    .post<any>(this.bookingEndpoint, value)
+    .post<any>(this.bookingEndpoint, formValue)
     .subscribe(
       data => {
         this.isSubmitted = true;
