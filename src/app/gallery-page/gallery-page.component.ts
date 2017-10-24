@@ -181,7 +181,7 @@ export class GalleryPageComponent implements OnInit {
                 galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
                 getThumbBoundsFn: function() {
-                    // See Options -> getThumbBoundsFn section of documentation for more info
+                    // See Options -> getThumbBoundsFn sect\ion of documentation for more info
                     const thumbnail = items[index].el.getElementsByTagName('img')[0]; // find thumbnail
                     const pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
                     const rect = thumbnail.getBoundingClientRect();
@@ -234,7 +234,7 @@ export class GalleryPageComponent implements OnInit {
         // Parse URL and open gallery if it contains #&pid=3&gid=1
         const hashData = photoswipeParseHash();
         if (hashData['pid'] && hashData['pid']) {
-            openPhotoSwipe( hashData['pid'] ,  galleryElements[ hashData['pid'] - 1 ], true, true );
+            openPhotoSwipe( hashData['pid'] ,  galleryElements[ hashData['pid'] - 1 ], false, false );
         }
     }
 }

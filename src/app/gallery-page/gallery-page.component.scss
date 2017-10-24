@@ -1,3 +1,18 @@
-.gallery-page {
-    height: 600px;
+.my-gallery {
+    // float: left;
+    // position: relative;
+    // left: 50%;
+}
+
+.gallery-thumbnail {
+    padding: 20px;
+}
+
+.gallery-thumbnail > figcaption {
+    padding-top: 10px;
+}
+
+.pswp {
+    position: absolute;
+    height: 100vh;
 }
