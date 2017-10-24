@@ -26,10 +26,7 @@ export class BlogPageComponent implements OnInit {
   callbackFlag = '&callback=JSONP_CALLBACK';
 
   galleryUris = [
-    'BaUvvg0nOMI'// , // Viera Wedding Looking Right
-    // 'BaUxkodHKSo', // Viera Closeup Face From Above
-    // 'BaXaGQinsGF', // Viera Laying down
-    // 'BaXcqmkHfe2' // Viera Chin and Dress
+    'BapDLwmnhLy' // Autumn
   ];
 
   galleryHtml: String;

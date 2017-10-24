@@ -2,15 +2,11 @@
     "name": "Jana Jurakova Wedding Makeup Artist",
     "short_name": "Bridal MUA",
     "description": "Jana Jurakove independent freelance wedding makeup artist.",
-    "theme_color": "#FF8282",
+    "theme_color": "#A00F7E",
     "background_color": "white",
     "display": "fullscreen",
     "start_url": "welcome/?utm_source=homescreen",
     "icons": [{
-        "src": "assets/eye_icon/eye_48.png",
-        "sizes": "48x48",
-        "type": "image/png"
-    }, {
         "src": "assets/eye_icon/eye_72.png",
         "sizes": "72x72",
         "type": "image/png"
