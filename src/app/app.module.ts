@@ -20,6 +20,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { AboutMePageComponent } from './about-me-page/about-me-page.component';
 import { GalleryPageComponent } from './gallery-page/gallery-page.component';
+import { BlogPageComponent } from './blog-page/blog-page.component';
 import { BookingPageComponent } from './booking-page/booking-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { ReturnSectionComponent } from './return-section/return-section.component';
@@ -36,6 +37,7 @@ import { environment } from '../environments/environment';
     WelcomePageComponent,
     AboutMePageComponent,
     GalleryPageComponent,
+    BlogPageComponent,
     BookingPageComponent,
     NotFoundPageComponent,
     ReturnSectionComponent,

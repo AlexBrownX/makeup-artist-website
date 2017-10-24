@@ -7,6 +7,7 @@ import { GalleryPageComponent } from './gallery-page/gallery-page.component';
 import { BookingPageComponent } from './booking-page/booking-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { ReviewPageComponent } from './review-page/review-page.component';
+import { BlogPageComponent } from './blog-page/blog-page.component';
 
 const appRoutes: Routes = [{
     path: 'welcome',
@@ -25,6 +26,12 @@ const appRoutes: Routes = [{
     component: GalleryPageComponent,
     data: {
         title: 'Gallery'
+    }
+}, {
+    path: 'blog',
+    component: BlogPageComponent,
+    data: {
+        title: 'Blog'
     }
 }, {
     path: 'bookings',
