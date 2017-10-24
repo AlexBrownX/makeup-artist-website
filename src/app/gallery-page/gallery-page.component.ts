@@ -134,7 +134,7 @@ export class GalleryPageComponent implements OnInit {
 
             if (index >= 0) {
                 // open PhotoSwipe if valid index found
-                openPhotoSwipe( index, clickedGallery, true, true );
+                openPhotoSwipe( index, clickedGallery, false, false );
             }
             return false;
         };
