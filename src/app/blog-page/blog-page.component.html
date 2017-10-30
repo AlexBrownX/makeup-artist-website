@@ -7,7 +7,7 @@
   </div>
   <main *ngIf="gallery.length > 0;">
     <div *ngFor="let blog of gallery; let myIndex = index">
-      <div class="instagram-media" [innerHTML]="blog.html | safe: 'html'"></div> -->
+      <div class="instagram-media" [innerHTML]="blog.html | safe: 'html'"></div>
     </div>
   </main>
 </div>

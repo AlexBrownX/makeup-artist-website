@@ -30,7 +30,6 @@ export class BlogPageComponent implements OnInit {
     'BapDLwmnhLy' // Autumn
   ];
 
-  galleryHtml: String;
   gallery = [];
   tempGallery = [];
   completeImageFetches = 0;
