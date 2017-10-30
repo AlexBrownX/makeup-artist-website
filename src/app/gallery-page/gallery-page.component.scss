@@ -7,6 +7,6 @@
 }
 
 .pswp {
-    position: absolute;
-    height: 100vh;
+    /* Stops the gallery jumping to the top of the screen */
+    position: fixed;
 }

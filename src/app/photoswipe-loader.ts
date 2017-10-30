@@ -14,7 +14,7 @@ export function initPhotoSwipeFromDOM(gallerySelector) {
   const hashData = photoswipeParseHash();
 
   if (hashData['pid'] && hashData['pid']) {
-    openPhotoSwipe(hashData['pid'], galleryElements[hashData['pid'] - 1], false, false);
+    openPhotoSwipe(hashData['pid'], galleryElements[ hashData['gid'] - 1 ], false, false);
   }
 }
 
