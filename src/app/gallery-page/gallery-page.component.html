@@ -1,54 +1,59 @@
-<div class="container gallery-page">
-  <div class="text-center">
-    <h1 class="accent-color vertical-margin-spaced">Gallery</h1>
-    
-    <div class="row">
-      <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-        <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-          <a href="./assets/images/wedding/3a.jpg" itemprop="contentUrl" data-size="453x681">
-            <img src="./assets/images/wedding/3b.jpg" itemprop="thumbnail" alt="Wedding" />
-          </a>
-          <figcaption itemprop="caption description">Wedding</figcaption>
-        </figure>
-
-        <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-          <a href="./assets/images/wedding/1a.jpg" itemprop="contentUrl" data-size="1024x681">
-            <img src="./assets/images/wedding/1b.jpg" itemprop="thumbnail" alt="Wedding" />
-          </a>
-          <figcaption itemprop="caption description">Wedding</figcaption>
-        </figure>
-        
-        <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-          <a href="./assets/images/wedding/2a.jpg" itemprop="contentUrl" data-size="1024x681">
-            <img src="./assets/images/wedding/2b.jpg" itemprop="thumbnail" alt="Wedding" />
-          </a>
-          <figcaption itemprop="caption description">Wedding</figcaption>
-        </figure>
-        
-        <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-          <a href="./assets/images/wedding/4a.jpg" itemprop="contentUrl" data-size="1024x681">
-            <img src="./assets/images/wedding/4b.jpg" itemprop="thumbnail" alt="Wedding" />
-          </a>
-          <figcaption itemprop="caption description">Wedding</figcaption>
-        </figure>
-
-        <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-          <a href="./assets/images/wedding/5a.jpg" itemprop="contentUrl" data-size="1024x681">
-            <img src="./assets/images/wedding/5b.jpg" itemprop="thumbnail" alt="Wedding" />
-          </a>
-          <figcaption itemprop="caption description">Wedding</figcaption>
-        </figure>
-      </div>
+<div class="container">
+  <header>
+    <div class="text-center">
+      <h1 class="accent-color vertical-margin-spaced">Gallery</h1>
     </div>
+  </header>
 
-  </div>
+  <main>
+    <div class="text-center">
+    
+      <div class="row">
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="./assets/images/wedding/3a.jpg" itemprop="contentUrl" data-size="453x681">
+              <img src="./assets/images/wedding/3b.jpg" itemprop="thumbnail" alt="Wedding 1" />
+            </a>
+            <figcaption itemprop="caption description">Wedding 1</figcaption>
+          </figure>
+
+          <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="./assets/images/wedding/1a.jpg" itemprop="contentUrl" data-size="1024x681">
+              <img src="./assets/images/wedding/1b.jpg" itemprop="thumbnail" alt="Wedding 2" />
+            </a>
+            <figcaption itemprop="caption description">Wedding 2</figcaption>
+          </figure>
+          
+          <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="./assets/images/wedding/2a.jpg" itemprop="contentUrl" data-size="1024x681">
+              <img src="./assets/images/wedding/2b.jpg" itemprop="thumbnail" alt="Wedding 3" />
+            </a>
+            <figcaption itemprop="caption description">Wedding 3</figcaption>
+          </figure>
+          
+          <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="./assets/images/wedding/4a.jpg" itemprop="contentUrl" data-size="1024x681">
+              <img src="./assets/images/wedding/4b.jpg" itemprop="thumbnail" alt="Wedding 4" />
+            </a>
+            <figcaption itemprop="caption description">Wedding 4</figcaption>
+          </figure>
+
+          <figure class="gallery-thumbnail" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="./assets/images/wedding/5a.jpg" itemprop="contentUrl" data-size="1024x681">
+              <img src="./assets/images/wedding/5b.jpg" itemprop="thumbnail" alt="Wedding 5" />
+            </a>
+            <figcaption itemprop="caption description">Wedding 5</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </main>
 </div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-  <!-- Background of PhotoSwipe. 
-        It's a separate element as animating opacity is faster than rgba(). -->
+  <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
   <div class="pswp__bg"></div>
 
   <!-- Slides wrapper with overflow:hidden. -->
@@ -65,30 +70,33 @@
 
       <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
       <div class="pswp__ui pswp__ui--hidden">
-
           <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)">
+              <span class="access">Close (Esc)</span>
+            </button>
 
-              <!--  Controls are self-explanatory. Order can be changed. -->
+            <button class="pswp__button pswp__button--share" title="Share">
+              <span class="access">Share Image</span>
+            </button>
 
-              <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen">
+              <span class="access">Toogle Fullscreen</span>                
+            </button>
 
-              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out">
+              <span class="access">Zoom in/out</span>
+            </button>
 
-              <button class="pswp__button pswp__button--share" title="Share"></button>
-
-              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-              <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-              <!-- element will get class pswp__preloader--active when preloader is running -->
-              <div class="pswp__preloader">
-                  <div class="pswp__preloader__icn">
-                    <div class="pswp__preloader__cut">
-                      <div class="pswp__preloader__donut"></div>
-                    </div>
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader--active when preloader is running -->
+            <div class="pswp__preloader">
+                <div class="pswp__preloader__icn">
+                  <div class="pswp__preloader__cut">
+                    <div class="pswp__preloader__donut"></div>
                   </div>
-              </div>
+                </div>
+            </div>
           </div>
 
           <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
@@ -96,9 +104,11 @@
           </div>
 
           <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+              <span class="access">Previous image</span>              
           </button>
 
           <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            <span class="access">Next image</span>
           </button>
 
           <div class="pswp__caption">

@@ -1,7 +1,13 @@
 <div class="container">
   <div class="text-center">
-    <h1 class="accent-color vertical-margin-spaced">Blog</h1>
-    <p class="padded-text">Here are some examples of other work that I am involved with.</p>
+    <header>
+      <h1 class="accent-color vertical-margin-spaced">Blog</h1>
+      <p class="padded-text">Here are some examples of other work that I am involved with.</p>
+    </header>
   </div>
-  <div *ngIf="gallery.length > 0;" class="instagram-media" [innerHTML]="gallery[0].html | safe: 'html'"></div>
+  <main *ngIf="gallery.length > 0;">
+    <div *ngFor="let blog of gallery; let myIndex = index">
+      <div class="instagram-media" [innerHTML]="blog.html | safe: 'html'"></div> -->
+    </div>
+  </main>
 </div>

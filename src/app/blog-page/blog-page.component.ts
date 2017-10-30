@@ -25,7 +25,8 @@ export class BlogPageComponent implements OnInit {
   omitScript = '?OMITSCRIPT=true';
   callbackFlag = '&callback=JSONP_CALLBACK';
 
-  galleryUris = [
+  blogUris = [
+    'Ba4x9gRnDEm', // Halloween
     'BapDLwmnhLy' // Autumn
   ];
 
@@ -43,7 +44,7 @@ export class BlogPageComponent implements OnInit {
   }
 
   getInstagramImages() {
-    for (const imageUri of this.galleryUris) {
+    for (const imageUri of this.blogUris) {
       this.getGalleryImage(imageUri).subscribe(data => {
         this.addImageToGallery(data);
       });
@@ -58,7 +59,7 @@ export class BlogPageComponent implements OnInit {
   triggerIfAllComplete() {
     this.completeImageFetches++;
 
-    if (this.completeImageFetches === this.galleryUris.length) {
+    if (this.completeImageFetches === this.blogUris.length) {
       this.gallery = this.tempGallery;
       this.completeImageFetches = 0;
       this.tempGallery = [];
@@ -78,6 +79,7 @@ export class BlogPageComponent implements OnInit {
   getGalleryImage(imageUri: string): Observable<any[]> {
     const imageUrl = this.createImageUrl(imageUri);
 
+    // TODO - Load in order
     return this.jsonp.get(imageUrl)
       .map(function(res: Response) {
           return res.json() || {};

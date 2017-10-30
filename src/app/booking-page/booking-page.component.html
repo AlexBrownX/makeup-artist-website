@@ -1,89 +1,90 @@
 <div class="container">
-    <div class="row">
-        <!-- Description Column -->
-        <div class="col-md-6">
-            <div class="booking-description vertical-margin-spaced">
-                <h1 class="accent-color">Bookings</h1>
-                <p class="padded-text">To discuss your requirements or to arrange a meeting, please send me a message using the booking form.</p>
-                
-                <h2 class="accent-color">Email</h2>
-                <p class="padded-text">Alternatively you can <a href="mailto:{{janaEmailAddress}}">send me an email</a>.</p>
+  <div class="row">
+    <!-- Description Column -->
+    <div class="col-md-6">
+      <div class="booking-description vertical-margin-spaced">
+        <h1 class="accent-color">Bookings</h1>
+        <p class="padded-text">To discuss your requirements or to arrange a meeting, please send me a message using the booking form.</p>
+
+        <h2 class="accent-color">Email</h2>
+        <p class="padded-text">Alternatively you can <a href="mailto:{{janaEmailAddress}}">send me an email</a>.</p>
+      </div>
+    </div>
+
+    <!-- Form Column -->
+    <div class="col-md-6">
+      <!-- Booking form -->
+      <form *ngIf="!isSubmitted" class="booking-form center-block" autocomplete="off" [formGroup]="bookingForm" (ngSubmit)="sendBooking(bookingForm.value)">
+        <fieldset>
+          <legend class="accent-color">Booking Form:</legend>
+
+          <!-- Name -->
+          <div class="form-group" [ngClass]="{ 'has-error': !bookingForm.controls['name'].valid && bookingForm.controls['name'].touched }">
+            <label for="name">Name:</label>
+            <span class="required">*</span>
+            <input id="name" type="text" class="form-control" [formControl]="bookingForm.controls['name']" />
+
+            <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['name'].valid && bookingForm.controls['name'].touched">
+              Name is required.
             </div>
+          </div>
+
+          <!-- Email address -->
+          <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['email'].valid && bookingForm.controls['email'].touched }">
+            <label for="email">Email address:</label>
+            <span class="required">*</span>
+            <input id="email" type="email" class="form-control" [formControl]="bookingForm.controls['email']" />
+
+            <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['email'].valid && bookingForm.controls['email'].touched">
+              Email address is required.
+            </div>
+          </div>
+
+          <!-- Telephone -->
+          <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['telephone'].valid && bookingForm.controls['telephone'].touched }">
+            <label for="telephone">Telephone Number:</label>
+            <input id="telephone" type="tel" class="form-control" [formControl]="bookingForm.controls['telephone']" />
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['subject'].valid && bookingForm.controls['subject'].touched }">
+            <label for="subject">Subject:</label>
+            <input id="subject" type="text" class="form-control" [formControl]="bookingForm.controls['subject']" />
+          </div>
+
+          <!-- Message -->
+          <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['message'].valid && bookingForm.controls['message'].touched }">
+            <label for="message">Message:</label>
+            <span class="required">*</span>
+            <textarea id="message" class="form-control" rows="5" id="message" [formControl]="bookingForm.controls['message']"></textarea>
+
+            <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['message'].valid && bookingForm.controls['message'].touched">
+              A message is required.
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Error sending message -->
+        <div *ngIf="hasError;" class="alert alert-danger">
+          <strong>Error sending message.</strong>
+          <p>Your message couldn't be sent this time. Please try again later, or <a href="mailto:{{janaEmailAddress}}">click here</a>            to send me an email.</p>
         </div>
 
-        <!-- Form Column -->
-        <div class="col-md-6">
-            <!-- Booking form -->
-            <form *ngIf="!isSubmitted" class="booking-form center-block" autocomplete="off" [formGroup]="bookingForm" (ngSubmit)="sendBooking(bookingForm.value)">                            
-                <fieldset>
-                    <legend class="accent-color">Booking Form:</legend>
-                    
-                    <!-- Name -->
-                    <div class="form-group" [ngClass]="{ 'has-error': !bookingForm.controls['name'].valid && bookingForm.controls['name'].touched }">
-                        <label for="name">Name:</label>
-                        <span class="required">*</span>
-                        <input id="name" type="text" class="form-control" [formControl]="bookingForm.controls['name']"/>
-
-                        <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['name'].valid && bookingForm.controls['name'].touched">
-                            Name is required.
-                        </div>
-                    </div>
-
-                    <!-- Email address -->
-                    <div class="form-group"  [ngClass]="{ 'has-error':!bookingForm.controls['email'].valid && bookingForm.controls['email'].touched }">
-                        <label for="email">Email address:</label>
-                        <span class="required">*</span>
-                        <input id="email" type="email" class="form-control" [formControl]="bookingForm.controls['email']" />
-
-                        <div class="alert alert-danger form-error" *ngIf="!bookingForm.controls['email'].valid && bookingForm.controls['email'].touched">
-                            Email address is required.
-                        </div>
-                    </div>
-
-                    <!-- Telephone -->
-                    <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['telephone'].valid && bookingForm.controls['telephone'].touched }">
-                        <label for="telephone">Telephone Number:</label>
-                        <input id="telephone" type="tel" class="form-control" [formControl]="bookingForm.controls['telephone']" />
-                    </div>
-
-                    <!-- Subject -->
-                    <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['subject'].valid && bookingForm.controls['subject'].touched }">
-                        <label for="subject">Subject:</label>
-                        <input id="subject" type="text" class="form-control" [formControl]="bookingForm.controls['subject']"  />
-                    </div>
-
-                    <!-- Message -->
-                    <div class="form-group" [ngClass]="{ 'has-error':!bookingForm.controls['message'].valid && bookingForm.controls['message'].touched }">
-                        <label for="message">Message:</label>
-                        <span class="required">*</span>
-                        <textarea id="message" class="form-control" rows="5" id="message" [formControl]="bookingForm.controls['message']" ></textarea>
-                        
-                        <div class="alert alert-danger form-error"  *ngIf="!bookingForm.controls['message'].valid && bookingForm.controls['message'].touched">
-                            A message is required.
-                        </div>
-                    </div>
-                </fieldset>
-
-                <!-- Error sending message -->
-                <div *ngIf="hasError;" class="alert alert-danger">
-                    <strong>Error sending message.</strong> 
-                    <p>Your message couldn't be sent this time. Please try again later, or <a href="mailto:{{janaEmailAddress}}">click here</a> to send me an email.</p>
-                </div>
-
-                <!-- Form Error -->
-                <div class="alert alert-warning form-error"  *ngIf="!bookingForm.valid && bookingForm.touched">
-                    Form is incomplete or contains errors.
-                </div>
-
-                <!-- Submit button -->
-                <button type="submit" [disabled]="!bookingForm.valid" class="btn btn-default center-block vertical-margin-spaced">Send Message</button>
-            </form>
+        <!-- Form Error -->
+        <div class="alert alert-warning form-error" *ngIf="!bookingForm.valid && bookingForm.touched">
+          Form is incomplete or contains errors.
         </div>
-    </div>
 
-    <!-- Message Sent -->
-    <div *ngIf="isSubmitted;" class="alert alert-success">
-        <strong>Message sent.</strong>
-        <p>Thank you for getting in touch. I will contact you as soon as possible.</p>
+        <!-- Submit button -->
+        <button type="submit" [disabled]="!bookingForm.valid && !isSending" class="btn btn-default center-block vertical-margin-spaced">Send Message</button>
+      </form>
     </div>
+  </div>
+
+  <!-- Message Sent -->
+  <div *ngIf="isSubmitted;" class="alert alert-success">
+    <strong>Message sent.</strong>
+    <p>Thank you for getting in touch. I will contact you as soon as possible.</p>
+  </div>
 </div>
+

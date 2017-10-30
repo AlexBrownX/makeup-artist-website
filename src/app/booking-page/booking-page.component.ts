@@ -1,10 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
-
-// import { NgForm } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-// import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 import { Http } from '@angular/http';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
@@ -22,6 +18,7 @@ export class BookingPageComponent implements OnInit {
   janaEmailAddress = 'jana.jurakova@yahoo.co.uk';
 
   isSubmitted = false;
+  isSending = false;
   hasError = false;
 
   bookingForm: FormGroup;
@@ -45,16 +42,21 @@ export class BookingPageComponent implements OnInit {
 
   sendBooking(formValue: any): void {
     this.hasError = false;
+    this.isSending = true;
 
     this.http
     .post<any>(this.bookingEndpoint, formValue)
     .subscribe(
       data => {
+        // TODO - Remove
+        this.isSending = false;
         this.isSubmitted = true;
+        console.dir(data);
       },
       (err: HttpErrorResponse) => {
         this.hasError = true;
-        // TODO - Show server errors - validation etc.
+        this.isSending = false;
+        this.isSubmitted = false;
 
         if (err.error instanceof Error) {
           console.error('A client error occurred:', err.error.message);
