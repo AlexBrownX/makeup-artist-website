@@ -18,19 +18,38 @@
     <!-- Menu items -->
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse">
+        <li routerLinkActive="active" class="hidden-xs">
           <a routerLink="/welcome">Welcome</a>
         </li>
-        <li routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse">
+        <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+          <a routerLink="/welcome">Welcome</a>
+        </li>
+
+        <li routerLinkActive="active" class="hidden-xs">
+          <a routerLink="/about-me">About Jana</a>
+        </li>        
+        <li routerLinkActive="active"  class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
           <a routerLink="/about-me">About Jana</a>
         </li>
-        <li routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse">
+
+        <li routerLinkActive="active" class="hidden-xs">
+          <a routerLink="/gallery">Gallery</a>
+        </li>        
+        <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
           <a routerLink="/gallery">Gallery</a>
         </li>
-        <li routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse">
-            <a routerLink="/blog">Blog</a>
-          </li>
-        <li routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse">
+
+        <li routerLinkActive="active" class="hidden-xs">
+          <a routerLink="/blog">Blog</a>
+        </li>
+        <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+          <a routerLink="/blog">Blog</a>
+        </li>
+
+        <li routerLinkActive="active" class="hidden-xs">
+          <a routerLink="/bookings">Bookings</a>
+        </li>
+        <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
           <a routerLink="/bookings">Bookings</a>
         </li>
       </ul>
