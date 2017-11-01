@@ -37,7 +37,7 @@ const appRoutes: Routes = [{
     path: 'contact',
     component: ContactPageComponent,
     data: {
-        title: 'Contact'
+        title: 'Contact me'
     }
 }, {
     path: 'review',
