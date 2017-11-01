@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+    <!-- Description Column -->
+    <div class="col-md-6">
+      <div class="contact-description vertical-margin-spaced">
+        <h1 class="accent-color">Contact me</h1>
+        <p class="padded-text">To discuss your requirements or to arrange a meeting, please send me a message using the contact form.</p>
+
+        <h2 class="accent-color">Email</h2>
+        <p class="padded-text">Alternatively you can <a href="mailto:{{janaEmailAddress}}">send me an email</a>.</p>
+      </div>
+    </div>
+
+    <!-- Form Column -->
+    <div class="col-md-6">
+      <!-- Contact form -->
+      <form *ngIf="!isSubmitted" class="contact-form center-block" autocomplete="off" [formGroup]="contactForm" (ngSubmit)="sendContactForm(contactForm)">
+        <fieldset>
+          <legend class="accent-color">Contact Form:</legend>
+
+          <!-- Name -->
+          <div class="form-group" [ngClass]="{ 'has-error': !contactForm.controls['name'].valid && contactForm.controls['name'].touched }">
+            <label for="name">Name:</label>
+            <span class="required">*</span>
+            <input id="name" type="text" class="form-control" [formControl]="contactForm.controls['name']" />
+
+            <div class="alert alert-danger form-error" *ngIf="!contactForm.controls['name'].valid && contactForm.controls['name'].touched">
+              Name is required.
+            </div>
+          </div>
+
+          <!-- Email address -->
+          <div class="form-group" [ngClass]="{ 'has-error':!contactForm.controls['email'].valid && contactForm.controls['email'].touched }">
+            <label for="email">Email address:</label>
+            <span class="required">*</span>
+            <input id="email" type="email" class="form-control" [formControl]="contactForm.controls['email']" />
+
+            <div class="alert alert-danger form-error" *ngIf="!contactForm.controls['email'].valid && contactForm.controls['email'].touched">
+              Email address is required.
+            </div>
+          </div>
+
+          <!-- Telephone -->
+          <div class="form-group" [ngClass]="{ 'has-error':!contactForm.controls['telephone'].valid && contactForm.controls['telephone'].touched }">
+            <label for="telephone">Telephone Number:</label>
+            <input id="telephone" type="tel" class="form-control" [formControl]="contactForm.controls['telephone']" />
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group" [ngClass]="{ 'has-error':!contactForm.controls['subject'].valid && contactForm.controls['subject'].touched }">
+            <label for="subject">Subject:</label>
+            <input id="subject" type="text" class="form-control" [formControl]="contactForm.controls['subject']" />
+          </div>
+
+          <!-- Message -->
+          <div class="form-group" [ngClass]="{ 'has-error':!contactForm.controls['message'].valid && contactForm.controls['message'].touched }">
+            <label for="message">Message:</label>
+            <span class="required">*</span>
+            <textarea id="message" class="form-control" rows="5" id="message" [formControl]="contactForm.controls['message']"></textarea>
+
+            <div class="alert alert-danger form-error" *ngIf="!contactForm.controls['message'].valid && contactForm.controls['message'].touched">
+              A message is required.
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Error sending message -->
+        <div *ngIf="hasError;" class="alert alert-danger">
+          <strong>Error sending message.</strong>
+          <p>Your message couldn't be sent this time. Please try again later, or <a href="mailto:{{janaEmailAddress}}">click here</a>            to send me an email.</p>
+        </div>
+
+        <!-- Form Error -->
+        <div class="alert alert-warning form-error" *ngIf="!contactForm.valid && contactForm.touched">
+          Form is incomplete or contains errors.
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" [disabled]="!contactForm.valid || isSubmitting" class="btn btn-default center-block vertical-margin-spaced">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Message Sent -->
+  <div *ngIf="isSubmitted;" class="alert alert-success">
+    <strong>Message sent.</strong>
+    <p>Thank you for getting in touch. I will contact you as soon as possible.</p>
+  </div>
+</div>
+
