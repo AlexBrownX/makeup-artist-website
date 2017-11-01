@@ -3,6 +3,7 @@ import { slideInDownAnimation } from '../animations';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { SafePipe } from '../SafePipe.pipe';
 
 @Component({
   selector: 'app-booking-page',
@@ -17,8 +18,8 @@ export class BookingPageComponent implements OnInit {
   bookingEndpoint = 'https://us-central1-jana-jurakova-makup-artist.cloudfunctions.net/writeBooking';
   janaEmailAddress = 'jana.jurakova@yahoo.co.uk';
 
+  isSubmitting = false;
   isSubmitted = false;
-  isSending = false;
   hasError = false;
 
   bookingForm: FormGroup;
@@ -40,23 +41,45 @@ export class BookingPageComponent implements OnInit {
 
   ngOnInit() { }
 
-  sendBooking(formValue: any): void {
+/*
+TODO - Think about safe pipe... is it just sticky tape for the UI ?
+Secure the service.
+
+import { DatePipe } from '@angular/common';
+class MyService {
+
+  constructor(private datePipe: DatePipe) {}
+
+  transformDate(date) {
+    new DatePipe().transform(myDate, 'yyyy-MM-dd');
+    this.datePipe.transform(myDate, 'yyyy-MM-dd');
+  }
+}
+export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
+  return (control: AbstractControl): {[key: string]: any} => {
+    const forbidden = nameRe.test(control.value);
+    return forbidden ? {'forbiddenName': {value: control.value}} : null;
+  };
+}
+forbiddenNameValidator(/bob/i) // <-- Here's how you pass in the custom validator
+*/
+
+  sendBooking(bookingForm: FormGroup): void {
     this.hasError = false;
-    this.isSending = true;
+    this.isSubmitting = true;
 
     this.http
-    .post<any>(this.bookingEndpoint, formValue)
+    .post<any>(this.bookingEndpoint, bookingForm.value)
     .subscribe(
       data => {
-        // TODO - Remove
-        this.isSending = false;
         this.isSubmitted = true;
-        console.dir(data);
+        this.isSubmitting = true;
       },
       (err: HttpErrorResponse) => {
+        bookingForm.enable();
         this.hasError = true;
-        this.isSending = false;
         this.isSubmitted = false;
+        this.isSubmitting = false;
 
         if (err.error instanceof Error) {
           console.error('A client error occurred:', err.error.message);

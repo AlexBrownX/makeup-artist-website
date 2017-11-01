@@ -14,7 +14,7 @@
     <!-- Form Column -->
     <div class="col-md-6">
       <!-- Booking form -->
-      <form *ngIf="!isSubmitted" class="booking-form center-block" autocomplete="off" [formGroup]="bookingForm" (ngSubmit)="sendBooking(bookingForm.value)">
+      <form *ngIf="!isSubmitted" class="booking-form center-block" autocomplete="off" [formGroup]="bookingForm" (ngSubmit)="sendBooking(bookingForm)">
         <fieldset>
           <legend class="accent-color">Booking Form:</legend>
 
@@ -76,7 +76,7 @@
         </div>
 
         <!-- Submit button -->
-        <button type="submit" [disabled]="!bookingForm.valid && !isSending" class="btn btn-default center-block vertical-margin-spaced">Send Message</button>
+        <button type="submit" [disabled]="!bookingForm.valid || isSubmitting" class="btn btn-default center-block vertical-margin-spaced">Send Message</button>
       </form>
     </div>
   </div>
