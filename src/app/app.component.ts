@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
+import { filter, map, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -14,22 +11,10 @@ import 'rxjs/add/operator/mergeMap';
 export class AppComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private titleService: Title) {}
 
+  // https://toddmotto.com/dynamic-page-titles-angular-2-router-events
   ngOnInit() {
     this.hideLoadingSpinner();
-
-    // https://toddmotto.com/dynamic-page-titles-angular-2-router-events
-    this.router.events
-    .filter((event) => event instanceof NavigationEnd)
-    .map(() => this.activatedRoute)
-    .map((route) => {
-      while (route.firstChild) {
-        route = route.firstChild;
-      }
-      return route;
-    })
-    .filter((route) => route.outlet === 'primary')
-    .mergeMap((route) => route.data)
-    .subscribe((event) => this.titleService.setTitle(event['title']));
+    this.listenToRouteChanges();
   }
 
   hideLoadingSpinner() {
@@ -38,5 +23,21 @@ export class AppComponent implements OnInit {
     for (let i = 0, l = loadingSpinner.length; i < l; i++) {
       loadingSpinner[i].className += loadingSpinner[i].className ? ' hidden' : 'hidden';
     }
+  }
+
+  listenToRouteChanges() {
+    this.router.events.pipe(
+      filter((event) => event instanceof NavigationEnd),
+      map(() => this.activatedRoute),
+      map((route) => {
+        while (route.firstChild) {
+          route = route.firstChild;
+        }
+        return route;
+      }),
+      filter((route) => route.outlet === 'primary'),
+      mergeMap((route) => route.data)
+    )
+    .subscribe((event) => this.titleService.setTitle(event['title']));
   }
 }
