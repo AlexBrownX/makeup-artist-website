@@ -2,8 +2,8 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
 
 import { JsonpModule, Jsonp, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+import { map, catchError } from 'rxjs/operators';
 
 import { ScriptService } from '../script-loader.service';
 
@@ -75,16 +75,14 @@ export class BlogPageComponent implements OnInit {
     }
   }
 
-  getGalleryImage(imageUri: string): Observable<any[]> {
+  // TODO - Load in order
+  getGalleryImage(imageUri: string): Observable<any> {
     const imageUrl = this.createImageUrl(imageUri);
 
-    // TODO - Load in order
-    return this.jsonp.get(imageUrl)
-      .map(function(res: Response) {
-          return res.json() || {};
-      }).catch(function(error: any) {
-        return Observable.throw(error);
-      });
+    return this.jsonp.get(imageUrl).pipe(
+      map(res => res.json() || {} ),
+      catchError(error => Observable.throw(error))
+    );
   }
 
   createImageUrl(imageUri: string) {
