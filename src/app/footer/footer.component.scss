@@ -4,9 +4,39 @@
 }
 
 .social {
-    padding: 0 10px 0 10px;
 }
 
 .social-link:hover {
     text-decoration: none;
+}
+
+.footer-link {
+    margin: 0 5px 0 5px; 
+    height: 42px;
+    width: 42px;
+    display: inline-block;
+    background-size: 42px 42px;
+    background-position: center;
+}
+
+.footer-link > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-link.facebook {
+    background-image: url('../../assets/images/facebook.svg');
+}
+
+.footer-link.twitter {
+    background-image: url('../../assets/images/twitter.svg');
+}
+
+.footer-link.instagram {
+    background-image: url('../../assets/images/instagram.svg');
+}
+
+.footer-link.email {
+    background-image: url('../../assets/images/email.svg');
 }
