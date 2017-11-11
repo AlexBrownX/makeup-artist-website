@@ -27,7 +27,8 @@ export class BlogPageComponent implements OnInit {
 
   blogUris = [
     'Ba4x9gRnDEm', // Halloween
-    'BapDLwmnhLy' // Autumn
+    'BapDLwmnhLy', // Autumn
+    'BbSpoeAHGms' // Luisa
   ];
 
   gallery = [];

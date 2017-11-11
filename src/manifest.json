@@ -7,22 +7,6 @@
     "display": "fullscreen",
     "start_url": "welcome/?utm_source=homescreen",
     "icons": [{
-        "src": "assets/eye_icon/eye_72.png",
-        "sizes": "72x72",
-        "type": "image/png"
-    }, {
-        "src": "assets/eye_icon/eye_96.png",
-        "sizes": "96x96",
-        "type": "image/png"
-    }, {
-        "src": "assets/eye_icon/eye_144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-    }, {
-        "src": "assets/eye_icon/eye_168.png",
-        "sizes": "168x168",
-        "type": "image/png"
-    }, {
         "src": "assets/eye_icon/eye_192.png",
         "sizes": "192x192",
         "type": "image/png"
