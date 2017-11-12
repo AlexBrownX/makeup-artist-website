@@ -20,8 +20,8 @@ export function initPhotoSwipeFromDOM(gallerySelector) {
 
 // parse slide data (url, title, size ...) from DOM elements
 // (children of gallerySelector)
-function parseThumbnailElements(thumbnailElement) {
-  const thumbElements = thumbnailElement.childNodes;
+function parseThumbnailElements(galleryElement) {
+  const thumbElements = document.querySelectorAll('.gallery-thumbnail'); // galleryElement.childNodes;
   const numNodes = thumbElements.length;
   const items = [];
   let figureEl;
@@ -87,8 +87,8 @@ function onThumbnailsClick(e) {
 
   // find index of clicked item by looping through all child nodes
   // alternatively, you may define index via data- attribute
-  const clickedGallery = clickedListItem.parentNode;
-  const childNodes = clickedListItem.parentNode.childNodes;
+  const clickedGallery = clickedListItem.parentNode.parentNode;
+  const childNodes = document.querySelectorAll('.gallery-thumbnail');
   const numChildNodes = childNodes.length;
   let nodeIndex = 0;
   let index;
