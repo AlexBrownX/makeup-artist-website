@@ -2,9 +2,15 @@
 
 # Personal Project - Makeup Artist Website
 
-A small web application project, to improve my knowledge of modern web application development.
+A small progressive web application project, to improve my knowledge of modern web application development.
 
 Build using Angular 5 on [Angular CLI version 1.5.0](https://github.com/angular/angular-cli).
+
+![Desktop View](/ScreenshotDesktop.jpg?raw=true "Desktop View")
+
+![Mobile Chrome View](/ScreenshotMobile1.jpg?raw=true "Mobile Chrome View")
+
+![Mobile Safari View](/ScreenshotMobile2.jpg?raw=true "Mobile Safari View")
 
 ## Development server
 
