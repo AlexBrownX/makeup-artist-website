@@ -8,6 +8,7 @@ module.exports = {
       'dist/**.ico',
       'dist/**.jpg',
       'dist/assets/images/*',
+      'dist/assets/images/wedding/*',
       'dist/assets/fonts/*',
       'dist/assets/eye_icon/*'
     ],
