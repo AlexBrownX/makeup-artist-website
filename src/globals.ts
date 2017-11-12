@@ -10,21 +10,53 @@ export const ScriptStore: Scripts[] = [
     {name: 'instagram', src: 'https://platform.instagram.com/en_US/embeds.js'}
 ];
 
-export const galleryDefinition = [
+export interface GalleryDefinition {
+    mainImage: String;
+    thumbnailImage: String;
+    caption: String;
+    size: String;
+}
+
+export const galleryDefinitions = [
     {
-        src: './assets/images//wedding/1a.jpg',
-        msrc: './assets/images//wedding/1b.jpg',
-        title: 'Caroline\'s Wedding',
-        author: 'Jana Jurakova',
-        w: 1024,
-        h: 681
-    },
-    {
-      src: './assets/images//wedding/2a.jpg',
-      msrc: './assets/images//wedding/2b.jpg',
-      title: 'Caroline\'s Wedding',
-      author: 'Jana Jurakova',
-      w: 1024,
-      h: 681
-  }
+        mainImage: '1a.jpg',
+        thumbnailImage: '1c.jpg',
+        caption: 'Wedding Photo 2017 1',
+        size: '1024x681'
+    }, {
+        mainImage: '2a.jpg',
+        thumbnailImage: '2c.jpg',
+        caption: 'Wedding Photo 2017 2',
+        size: '1024x681'
+    }, {
+        mainImage: '3a.jpg',
+        thumbnailImage: '3c.jpg',
+        caption: 'Wedding Photo 2017 3',
+        size: '1024x681'
+    }, {
+        mainImage: '4a.jpg',
+        thumbnailImage: '4c.jpg',
+        caption: 'Wedding Photo 2017 4',
+        size: '1024x681'
+    }, {
+        mainImage: '5a.jpg',
+        thumbnailImage: '5c.jpg',
+        caption: 'Wedding Photo 2017 5',
+        size: '1024x681'
+    }, {
+        mainImage: '6a.jpg',
+        thumbnailImage: '6c.jpg',
+        caption: 'Wedding Photo 2017 6',
+        size: '1024x681'
+    }, {
+        mainImage: '7a.jpg',
+        thumbnailImage: '7c.jpg',
+        caption: 'Wedding Photo 2017 7',
+        size: '1024x681'
+    }, {
+        mainImage: '8a.jpg',
+        thumbnailImage: '8c.jpg',
+        caption: 'Wedding Photo 2017 8',
+        size: '1024x681'
+    }
 ];

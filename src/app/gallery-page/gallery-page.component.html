@@ -6,80 +6,16 @@
   </header>
 
   <main>
+    
     <div class="row my-gallery">
-
-      <div class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
+      <div *ngFor="let galleryEntry of galleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
         <figure class="gallery-thumbnail">
-          <a href="./assets/images/wedding/1a.jpg" data-size="1024x681">
-            <img class="img-responsive center-block" src="./assets/images/wedding/1c.jpg" alt="Wedding 1" />
+          <a href="./assets/images/wedding/{{galleryEntry.mainImage}}" [attr.data-size]="galleryEntry.size">
+            <img class="img-responsive center-block" src="./assets/images/wedding/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
           </a>
-          <figcaption itemprop="caption description">Wedding 1</figcaption>
+          <figcaption itemprop="caption description">{{galleryEntry.caption}}</figcaption>
         </figure>
       </div>
-
-      <div class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
-        <figure class="gallery-thumbnail">
-          <a href="./assets/images/wedding/2a.jpg" data-size="1024x681">
-            <img class="img-responsive center-block" src="./assets/images/wedding/2c.jpg" alt="Wedding 1" />
-          </a>
-          <figcaption itemprop="caption description">Wedding 1</figcaption>
-        </figure>
-      </div>
-
-      <div class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
-        <figure class="gallery-thumbnail">
-          <a href="./assets/images/wedding/3a.jpg" data-size="1024x681">
-            <img class="img-responsive center-block" src="./assets/images/wedding/3c.jpg" alt="Wedding 1" />
-          </a>
-          <figcaption itemprop="caption description">Wedding 1</figcaption>
-        </figure>
-      </div>
-      
-      <div class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
-        <figure class="gallery-thumbnail">
-          <a href="./assets/images/wedding/4a.jpg" data-size="1024x681">
-            <img class="img-responsive center-block" src="./assets/images/wedding/4c.jpg" alt="Wedding 1" />
-          </a>
-          <figcaption itemprop="caption description">Wedding 1</figcaption>
-        </figure>
-      </div>
-
-      <div class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
-        <figure class="gallery-thumbnail">
-          <a href="./assets/images/wedding/5a.jpg" data-size="1024x681">
-            <img class="img-responsive center-block" src="./assets/images/wedding/5c.jpg" alt="Wedding 1" />
-          </a>
-          <figcaption itemprop="caption description">Wedding 1</figcaption>
-        </figure>
-      </div>
-
-      <div class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
-        <figure class="gallery-thumbnail">
-          <a href="./assets/images/wedding/6a.jpg" data-size="1024x681">
-            <img class="img-responsive center-block" src="./assets/images/wedding/6c.jpg" alt="Wedding 1" />
-          </a>
-          <figcaption itemprop="caption description">Wedding 1</figcaption>
-        </figure>
-      </div>
-
-      <div class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
-        <figure class="gallery-thumbnail">
-          <a href="./assets/images/wedding/7a.jpg" data-size="1024x681">
-            <img class="img-responsive center-block" src="./assets/images/wedding/7c.jpg" alt="Wedding 1" />
-          </a>
-          <figcaption itemprop="caption description">Wedding 1</figcaption>
-        </figure>
-      </div>
-
-      <div class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
-        <figure class="gallery-thumbnail">
-          <a href="./assets/images/wedding/8a.jpg" data-size="1024x681">
-            <img class="img-responsive center-block" src="./assets/images/wedding/8c.jpg" alt="Wedding 1" />
-          </a>
-          <figcaption itemprop="caption description">Wedding 1</figcaption>
-        </figure>
-      </div>
-
     </div>
 
   </main>
