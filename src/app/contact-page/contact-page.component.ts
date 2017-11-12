@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Http } from '@angular/http';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { SafePipe } from '../SafePipe.pipe';
+import * as globalVars from '../../globals';
 
 @Component({
   selector: 'app-contact-page',
@@ -16,7 +17,7 @@ export class ContactPageComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
 
   dbEndpoint = 'https://us-central1-jana-jurakova-makup-artist.cloudfunctions.net/writeBooking';
-  janaEmailAddress = 'jana.jurakova.makeup@gmail.com';
+  emailAddress = globalVars.contact.emailAddress;
 
   isSubmitting = false;
   isSubmitted = false;

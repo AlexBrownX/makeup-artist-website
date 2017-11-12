@@ -6,6 +6,13 @@ interface Scripts {
     src: string;
 }
 
+export const contact = {
+    emailAddress: 'jana.jurakova.makeup@gmail.com',
+    facebook: 'https://www.facebook.com/jana.jurakova',
+    twitter: 'https://twitter.com/JurakovaJana',
+    instagram: 'https://www.instagram.com/janajurakova11mua/'
+};
+
 export const ScriptStore: Scripts[] = [
     {name: 'instagram', src: 'https://platform.instagram.com/en_US/embeds.js'}
 ];
