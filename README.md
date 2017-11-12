@@ -6,11 +6,10 @@ A small progressive web application project, to improve my knowledge of modern w
 
 Build using Angular 5 on [Angular CLI version 1.5.0](https://github.com/angular/angular-cli).
 
-![Desktop View](/ScreenshotDesktop.jpg?raw=true "Desktop View")
+<img src="ScreenshotDesktop.jpg" width="500">
 
-![Mobile Chrome View](/ScreenshotMobile1.jpg?raw=true "Mobile Chrome View")
-
-![Mobile Safari View](/ScreenshotMobile2.jpg?raw=true "Mobile Safari View")
+<img src="ScreenshotMobile1.jpg" width="250">
+<img src="ScreenshotMobile2.jpg" width="250">
 
 ## Development server
 
