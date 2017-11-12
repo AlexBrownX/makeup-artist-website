@@ -16,7 +16,7 @@ export class ContactPageComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
 
   dbEndpoint = 'https://us-central1-jana-jurakova-makup-artist.cloudfunctions.net/writeBooking';
-  janaEmailAddress = 'jana.jurakova@yahoo.co.uk';
+  janaEmailAddress = 'jana.jurakova.makeup@gmail.com';
 
   isSubmitting = false;
   isSubmitted = false;
