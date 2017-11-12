@@ -7,9 +7,11 @@ import { JsonpModule } from '@angular/http';
 
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
+// Prevents application from working correctly on IE 10
+// https://github.com/firebase/firebase-js-sdk/issues/157
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { SafePipe } from './SafePipe.pipe';
 import { ScriptService } from './script-loader.service';
@@ -24,7 +26,6 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { ReturnSectionComponent } from './return-section/return-section.component';
-import { ReviewPageComponent } from './review-page/review-page.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { environment } from '../environments/environment';
@@ -41,15 +42,14 @@ import { environment } from '../environments/environment';
     ContactPageComponent,
     NotFoundPageComponent,
     ReturnSectionComponent,
-    FooterComponent,
-    ReviewPageComponent
+    FooterComponent
 ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
+    // AngularFireDatabaseModule,
+    // AngularFireAuthModule,
     HttpClientModule,
     JsonpModule,
     FormsModule,

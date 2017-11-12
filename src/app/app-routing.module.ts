@@ -4,10 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { AboutMePageComponent } from './about-me-page/about-me-page.component';
 import { GalleryPageComponent } from './gallery-page/gallery-page.component';
+import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { ReviewPageComponent } from './review-page/review-page.component';
-import { BlogPageComponent } from './blog-page/blog-page.component';
 
 const appRoutes: Routes = [{
     path: 'welcome',
@@ -38,12 +37,6 @@ const appRoutes: Routes = [{
     component: ContactPageComponent,
     data: {
         title: 'Contact me'
-    }
-}, {
-    path: 'review',
-    component: ReviewPageComponent,
-    data: {
-        title: 'Review'
     }
 }, {
     path: '',
