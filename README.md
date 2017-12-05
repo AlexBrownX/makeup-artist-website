@@ -4,7 +4,7 @@
 
 A small progressive web application project, to improve my knowledge of modern web application development.
 
-Build using Angular 5 on [Angular CLI version 1.5.0](https://github.com/angular/angular-cli).
+Build using Angular 5 on [Angular CLI version 1.5.5](https://github.com/angular/angular-cli).
 
 <img src="ScreenshotDesktop.jpg" width="500">
 
