@@ -65,5 +65,25 @@ export const galleryDefinitions = [
         thumbnailImage: '8c.jpg',
         caption: 'Wedding Photo 2017 8',
         size: '1024x681'
+    }, {
+        mainImage: '10a.jpg',
+        thumbnailImage: '10c.jpg',
+        caption: 'Wedding Photo 2017 9',
+        size: '1024x683'
+    }, {
+        mainImage: '12a.jpg',
+        thumbnailImage: '12c.jpg',
+        caption: 'Wedding Photo 2017 10',
+        size: '1024x683'
+    }, {
+        mainImage: '9a.jpg',
+        thumbnailImage: '9c.jpg',
+        caption: 'Wedding Photo 2017 11',
+        size: '1024x683'
+    }, {
+        mainImage: '11a.jpg',
+        thumbnailImage: '11c.jpg',
+        caption: 'Wedding Photo 2017 12',
+        size: '681x1021'
     }
 ];

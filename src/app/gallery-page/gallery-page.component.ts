@@ -7,22 +7,21 @@
 //   @HostBinding('style.display') display = 'block';
 
 import { Component,  AfterViewInit , HostBinding } from '@angular/core';
-import { slideInDownAnimation } from '../animations';
+import { GalleryDefinition } from '../../globals';
+import { galleryDefinitions } from '../../globals';
 import * as photoSwipeLoader from '../photoswipe-loader';
-import * as globalVars from '../../globals';
- 
+
 @Component({
   selector: 'app-gallery-page',
   templateUrl: './gallery-page.component.html',
-  styleUrls: ['./gallery-page.component.scss'],
-  animations: [slideInDownAnimation]
+  styleUrls: ['./gallery-page.component.scss']
 })
 export class GalleryPageComponent implements AfterViewInit {
 
-  galleryDefinitions: globalVars.GalleryDefinition[];
+  galleryDefinitions: GalleryDefinition[];
 
   constructor() {
-    this.galleryDefinitions = globalVars.galleryDefinitions;
+    this.galleryDefinitions = galleryDefinitions;
   }
 
   ngAfterViewInit() {
