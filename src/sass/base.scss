@@ -49,3 +49,14 @@ body {
     padding: 10px;
     color: #FFF;
 }
+
+.cta-button:focus,
+.cta-button:hover {
+    outline-color: rgba(211, 76, 182, 0.2);
+}
+
+.cta-button:active {
+    border: 1px solid #FFF;
+    background: rgba(211, 76, 182, 0.2);
+    outline-color: rgba(211, 76, 182, 0.2);    
+}
