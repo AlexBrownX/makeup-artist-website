@@ -1,9 +1,15 @@
 .footer {
-    padding: 10px;
-    border-radius: 5px;
-}
+    margin: 10px;
+    background: rgba($color: #000000, $alpha: 0.3);
+    padding: 3px;
+    border-radius: 2px;
 
-.social {
+    .wrapper {
+        height: 46px;        
+        padding: 5px;
+        border-radius: 2px;      
+        background-color: rgba($color: #FFF, $alpha: 0.4);
+    }
 }
 
 .social-link:hover {
@@ -12,10 +18,10 @@
 
 .footer-link {
     margin: 0 5px 0 5px; 
-    height: 42px;
-    width: 42px;
+    height: 36px;
+    width: 36px;
     display: inline-block;
-    background-size: 42px 42px;
+    background-size: 36px 36px;
     background-position: center;
 }
 

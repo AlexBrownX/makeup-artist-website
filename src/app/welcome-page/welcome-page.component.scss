@@ -1,33 +1,49 @@
-.welcome-image {
-    height: 550px;
-    border-radius: 5px;
-    background: url("../../assets/images/1a.jpg"); 
-    background-position: top;
+@import '../../sass/mixins.scss';
+
+.background {
+  background: url("../../assets/images/main-background-small.jpg") no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include breakpoint(sm) {
+    background: url("../../assets/images/main-background-large.jpg") no-repeat center center;
+    background-size: cover;
+  }
 }
 
-header {
-    text-align: center;
-    padding-top: 150px;
-}
+.welcome-content {
+  margin: 340px 10px 0 10px;
+  background: rgba($color: #000000, $alpha: 0.3);
+  padding: 3px;
+  border-radius: 2px;
 
-.primary-title {
-    color: white;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-}
+  .wrapper {
+    padding: 10px;
+    border-radius: 2px;      
+    background-color: rgba($color: #FFF, $alpha: 0.4);  
 
-.secondary-title {
-    color: white;    
-    padding-top: 50px;
-    font-size: 1.5rem;
-}
-
-@media screen and (min-width: 424px) {
-    .welcome-image {
-        height: 750px;
-        background: url("../../assets/images/1b.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
+    .logo {
+      background: url("../../assets/images/logo-transparent-small.png");
+      width: 280px;
+      height: 130px;
     }
+  
+    .heading {
+      font-size: 1.5em;
+      font-weight: normal;
+    }
+
+    .text-wrapper {
+      border-radius: 2px;
+
+      p {
+        color: #FFF;
+      }
+    }
+  }
 }

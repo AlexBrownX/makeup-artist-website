@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 export class AppComponent implements OnInit {
 
   ngOnInit() {
-    this.hideLoadingSpinner();
+//    this.hideLoadingSpinner();
   }
 
   hideLoadingSpinner() {

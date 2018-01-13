@@ -1,9 +1,11 @@
+@import './fonts.scss';
+
 $accent-color: #A00F7E;
 
 html,
 body {
     min-width: 320px;
-    padding-bottom: 10px;
+    font-size: 16px;
 }
 
 .hidden,
@@ -37,4 +39,13 @@ body {
     line-height: 30px;
     font-size: 1.6rem;
     padding: 10px 0 10px 0;
+}
+
+// Global Button Styles
+.cta-button {
+    background:transparent;
+    border: 1px solid #FFF;
+    font-size: 0.875em;
+    padding: 10px;
+    color: #FFF;
 }

@@ -1,0 +1,41 @@
+@import './variables.scss';
+
+$breakpoints-min: (
+  xs: $screen-xs-min,
+  sm: $screen-sm-min,
+  md: $screen-md-min,
+  lg: $screen-lg-min
+);
+
+$breakpoints-max: (
+  xs: $screen-xs-max,
+  sm: $screen-sm-max,
+  md: $screen-md-max,
+  lg: $screen-lg-max
+);
+
+@mixin breakpoint($start, $end: null) {
+  $mediaQuery: '';
+  $minimum: $start;
+  $maximum: $end;
+
+  @if (map-has-key($map: $breakpoints-min, $key: $start)) {
+    $minimum: map-get($map: $breakpoints-min, $key: $start);
+  }
+
+  @if (map-has-key($map: $breakpoints-max, $key: $end)) {
+    $maximum: map-get($map: $breakpoints-max, $key: $end);
+  }
+
+  @if ($minimum) {
+    $mediaQuery: 'and (min-width: #{$minimum})';
+  }
+
+  @if ($maximum) {
+    $mediaQuery: $mediaQuery + ' and (max-width: #{$maximum})';
+  }
+
+  @media screen #{$mediaQuery} {
+    @content;
+  }
+};

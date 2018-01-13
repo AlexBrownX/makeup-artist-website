@@ -24,7 +24,7 @@
         "./assets/custom-bootstrap/css/bootstrap.min.css",
         "../node_modules/photoswipe/dist/photoswipe.css",
         "../node_modules/photoswipe/dist/default-skin/default-skin.css",
-        "styles.scss"
+        "./sass/styles.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
