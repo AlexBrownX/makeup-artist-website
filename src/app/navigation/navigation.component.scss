@@ -24,6 +24,12 @@
         border: 1px solid rgba($color: #FFF, $alpha: 0.8)
     }
 
+    .navbar-toggle:active {
+        border: 1px solid #FFF;
+        background: rgba(211, 76, 182, 0.2);
+        outline-color: rgba(211, 76, 182, 0.2);
+    }
+
     .menu-button-text {
         color: rgba($color: #FFF, $alpha: 0.8);
         font-size: 0.875em;
@@ -44,14 +50,15 @@
 
     .active {
         a {
-            background: rgba(211, 76, 182, 0.2);        
+            background: rgba(211, 76, 182, 0.2);   
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
         }
     }
 }
 
 .brand-title {
-  color: #FFF;
-  font-size: 1.125em;
-  font-weight: normal;
-  font-size: 1.2em;
+    color: #FFF;
+    font-size: 1.125em;
+    font-weight: normal;
+    font-size: 1.2em;
 }
