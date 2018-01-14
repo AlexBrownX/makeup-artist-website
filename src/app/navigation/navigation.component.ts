@@ -11,9 +11,4 @@ export class NavigationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
-
-  menuItemClick(event: Event): void {
-    alert('');
-    console.dir(event);
-  }
 }

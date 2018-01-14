@@ -2,3 +2,21 @@
     margin: 0 auto !important;
     max-width: 640px;    
 }
+
+.main-content {
+    margin: 50px 10px 0 10px;
+
+    .wrapper {
+        padding: 10px;
+        
+        .heading {
+        font-size: 1.5em;
+        font-weight: normal;
+        margin: 10px 0;
+        }
+
+        .text-wrapper {
+        margin: 10px 0;
+        }
+    }
+}

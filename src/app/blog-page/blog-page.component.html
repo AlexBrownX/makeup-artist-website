@@ -1,13 +1,17 @@
-<div class="container">
-  <div class="text-center">
-    <header>
-      <h1 class="accent-color vertical-margin-spaced">Blog</h1>
-      <p class="padded-text">Here are some examples of other work that I am involved with.</p>
-    </header>
-  </div>
-  <main *ngIf="gallery.length > 0;">
-    <div *ngFor="let blog of gallery; let myIndex = index">
-      <div class="instagram-media" [innerHTML]="blog.html | safe: 'html'"></div>
+<!-- Content -->
+<main>
+  <div class="main-content">
+    <div class="wrapper">
+      <div class="text-wrapper">
+        <h2 class="heading text-center accent-color">Blog</h2>
+        <p>Here are some examples of other work that I am involved with.</p>
+      </div>
+      
+      <div *ngIf="gallery.length > 0;">
+        <div class="image-wrapper" *ngFor="let blog of gallery; let myIndex = index">
+          <div class="instagram-media" [innerHTML]="blog.html | safe: 'html'"></div>
+        </div>
+      </div>
     </div>
-  </main>
-</div>
+  </div>
+</main>
