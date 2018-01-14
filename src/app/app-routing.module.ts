@@ -7,6 +7,7 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { AboutMePageComponent } from './about-me-page/about-me-page.component';
 import { GalleryPageComponent } from './gallery-page/gallery-page.component';
+import { PricesPageComponent } from './prices-page/prices-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
@@ -28,6 +29,12 @@ const appRoutes: Routes = [{
   component: GalleryPageComponent,
   data: {
     title: 'Gallery'
+  }
+}, {
+  path: 'prices',
+  component: PricesPageComponent,
+  data: {
+    title: 'Prices'
   }
 }, {
   path: 'blog',
