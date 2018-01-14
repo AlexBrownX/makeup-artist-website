@@ -1,59 +1,56 @@
-<!-- <div class="container"> -->
-  <nav class="navbar navbar-fixed-top">
-    <div class="navbar-header">
-      <!-- Mobile menu button -->
-      <button type="button" tabindex="1" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="menu-button-text">Menu</span>
-      </button>
+<nav class="navbar navbar-fixed-top">
+  <div class="navbar-header">
+    <!-- Mobile menu button -->
+    <button type="button" tabindex="1" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="menu-button-text">Menu</span>
+    </button>
 
-      <!-- Heading -->
-      <a class="navbar-brand brand-title" href="#">
-        <!-- <div class="brand-logo"></div> -->
-        <!-- TODO - Hide on other pages -->
-        <span>Bridal Makeup Artist</span>
-      </a>
-    </div>
+    <!-- Heading -->
+    <a class="navbar-brand brand-title" href="#">
+      <div *ngIf="showSmallLogo" class="brand-logo"></div>
+      <span *ngIf="!showSmallLogo">Bridal Makeup Artist</span>
+    </a>
+  </div>
 
-    <!-- Menu items -->
-    <!-- TODO - Wave reports redundant links -->
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li routerLinkActive="active" class="hidden-xs">
-          <a routerLink="/welcome">Welcome</a>
-        </li>
-        <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
-          <a routerLink="/welcome">Welcome</a>
-        </li>
+  <!-- Menu items -->
+  <!-- TODO - Wave reports redundant links -->
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li routerLinkActive="active" class="hidden-xs">
+        <a routerLink="/welcome">Welcome</a>
+      </li>
+      <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+        <a routerLink="/welcome">Welcome</a>
+      </li>
 
-        <li routerLinkActive="active" class="hidden-xs">
-          <a routerLink="/about-me">About Jana</a>
-        </li>        
-        <li routerLinkActive="active"  class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
-          <a routerLink="/about-me">About Jana</a>
-        </li>
+      <li routerLinkActive="active" class="hidden-xs">
+        <a routerLink="/about-me">About Jana</a>
+      </li>        
+      <li routerLinkActive="active"  class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+        <a routerLink="/about-me">About Jana</a>
+      </li>
 
-        <li routerLinkActive="active" class="hidden-xs">
-          <a routerLink="/gallery">Gallery</a>
-        </li>        
-        <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
-          <a routerLink="/gallery">Gallery</a>
-        </li>
+      <li routerLinkActive="active" class="hidden-xs">
+        <a routerLink="/gallery">Gallery</a>
+      </li>        
+      <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+        <a routerLink="/gallery">Gallery</a>
+      </li>
 
-        <li routerLinkActive="active" class="hidden-xs">
-          <a routerLink="/blog">Blog</a>
-        </li>
-        <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
-          <a routerLink="/blog">Blog</a>
-        </li>
+      <li routerLinkActive="active" class="hidden-xs">
+        <a routerLink="/blog">Blog</a>
+      </li>
+      <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+        <a routerLink="/blog">Blog</a>
+      </li>
 
-        <li routerLinkActive="active" class="hidden-xs">
-          <a routerLink="/contact">Contact me</a>
-        </li>
-        <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
-          <a routerLink="/contact">Contact me</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<!-- </div> -->
+      <li routerLinkActive="active" class="hidden-xs">
+        <a routerLink="/contact">Contact me</a>
+      </li>
+      <li routerLinkActive="active" class="visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+        <a routerLink="/contact">Contact me</a>
+      </li>
+    </ul>
+  </div>
+</nav>

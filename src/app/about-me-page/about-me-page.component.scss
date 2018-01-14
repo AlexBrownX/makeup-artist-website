@@ -1,16 +1,67 @@
-.about-me-title {
-    padding: 10px 0 10px 0;
+@import '../../sass/mixins.scss';
+
+.background {
+    background: url("../../assets/images/aboutme-background-small.jpg") no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(sm) {
+        background: url("../../assets/images/aboutme-background-large.jpg") no-repeat center center;
+        background-size: cover;
+    }
 }
 
-.about-me-heading {
-    line-height: 30px;
-    padding: 10px 0 10px 0;
+.welcome-content {
+    margin: 340px 10px 0 10px;
+    background: rgba($color: #000000, $alpha: 0.3);
+    padding: 3px;
+    border-radius: 2px;
+
+    .wrapper {
+        padding: 10px;
+        border-radius: 2px;      
+        background-color: rgba($color: #FFF, $alpha: 0.4);  
+
+        .heading {
+            font-size: 1.5em;
+         font-weight: normal;
+        }
+
+        .text-wrapper {
+            border-radius: 2px;
+
+            p {
+                color: #FFF;
+            }
+
+            a {
+                color: #A00F7E;
+            }
+        }
+
+        .button-group {
+            margin: 10px 0;
+            padding: 10px;
+            text-align: center;
+
+            button {
+                margin: 0 10px;
+            }
+        }
+    }
 }
 
 .about-me-image {
-    height: 300px;
-    width: 300px;
+    border: 1px solid #000;  
+    border-radius: 2px;
+    height: 275px;
+    width: 275px;
     margin: 0 auto;
     background-image:url("../../assets/images/jana_about_me.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(255,255,255, .3)), url("../../assets/images/jana_about_me.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255,255,255, .2)), url("../../assets/images/jana_about_me.jpg");
 }

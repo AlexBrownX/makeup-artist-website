@@ -1,7 +1,7 @@
 @import '../../sass/mixins.scss';
 
 .background {
-  background: url("../../assets/images/main-background-small.jpg") no-repeat center center;
+  background: url("../../assets/images/welcome-background-small.jpg") no-repeat center center;
   background-size: cover;
   position: fixed;
   z-index: -1;
@@ -11,7 +11,7 @@
   height: 100%;
 
   @include breakpoint(sm) {
-    background: url("../../assets/images/main-background-large.jpg") no-repeat center center;
+    background: url("../../assets/images/welcome-background-large.jpg") no-repeat center center;
     background-size: cover;
   }
 }
