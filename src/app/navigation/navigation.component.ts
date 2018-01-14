@@ -8,12 +8,9 @@ import { Event } from '@angular/router/src/events';
 })
 export class NavigationComponent implements OnInit {
 
-  @Input() showSmallLogo: boolean;
-
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   menuItemClick(event: Event): void {
     alert('');
