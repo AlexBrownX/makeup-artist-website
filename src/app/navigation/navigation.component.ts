@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Event } from '@angular/router/src/events';
 
 @Component({
   selector: 'app-navigation',
@@ -14,4 +15,8 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
+  menuItemClick(event: Event): void {
+    alert('');
+    console.dir(event);
+  }
 }
