@@ -68,26 +68,36 @@ export const galleryDefinitions = [
     }, {
         mainImage: '9a.jpg',
         thumbnailImage: '9c.jpg',
-        caption: 'Wedding Photo 2017 9',
+        caption: 'Luisa Wedding Photo 2017 1',
         size: '1024x683'
     }, {
         mainImage: '10a.jpg',
         thumbnailImage: '10c.jpg',
-        caption: 'Wedding Photo 2017 10',
+        caption: 'Luisa Wedding Photo 2017 2',
         size: '1024x683'
     }, {
         mainImage: '11a.jpg',
         thumbnailImage: '11c.jpg',
-        caption: 'Wedding Photo 2017 11',
+        caption: 'Luisa Wedding Photo 2017 3',
         size: '1024x683'
     }, {
         mainImage: '12a.jpg',
         thumbnailImage: '12c.jpg',
-        caption: 'Wedding Photo 2017 12',
+        caption: 'Luisa Wedding Photo 2017 4',
         size: '681x1021'
     }, {
         mainImage: '13a.jpg',
         thumbnailImage: '13c.jpg',
+        caption: 'Luisa Wedding Photo 2017 5',
+        size: '681x957'
+    }, {
+        mainImage: '14a.jpg',
+        thumbnailImage: '14c.jpg',
+        caption: 'Luisa Wedding Photo 2017 6',
+        size: '681x946'
+    }, {
+        mainImage: '15a.jpg',
+        thumbnailImage: '15c.jpg',
         caption: 'Viera Wedding Photo 2017 1',
         size: '681x1021'
     }
