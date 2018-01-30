@@ -85,5 +85,10 @@ export const galleryDefinitions = [
         thumbnailImage: '12c.jpg',
         caption: 'Wedding Photo 2017 12',
         size: '681x1021'
+    }, {
+        mainImage: '13a.jpg',
+        thumbnailImage: '13c.jpg',
+        caption: 'Viera Wedding Photo 2017 1',
+        size: '681x1021'
     }
 ];
