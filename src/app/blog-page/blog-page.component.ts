@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
 
 import { JsonpModule, Jsonp, Response } from '@angular/http';
@@ -15,13 +15,15 @@ import { ScriptService } from '../script-loader.service';
   templateUrl: './blog-page.component.html',
   styleUrls: ['./blog-page.component.scss'],
   providers: [ScriptService],
-  animations: [slideInDownAnimation]
+  animations: [slideInDownAnimation],
+  encapsulation: ViewEncapsulation.None
 })
 export class BlogPageComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display')   display = 'block';
 
   instagramRootUrl = 'https://api.instagram.com/oembed/?url=http://instagr.am/p/';
+
   omitScript = '?OMITSCRIPT=true';
   callbackFlag = '&callback=JSONP_CALLBACK';
 
@@ -40,7 +42,8 @@ export class BlogPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getInstagramImages();
+    // TODO - Disabled because instagram changed API needs to be re-worked
+    // this.getInstagramImages();
   }
 
   getInstagramImages() {
