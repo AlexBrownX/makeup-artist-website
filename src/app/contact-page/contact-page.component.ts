@@ -1,9 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Http } from '@angular/http';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { SafePipe } from '../SafePipe.pipe';
 import * as globalVars from '../../globals';
 
 @Component({
@@ -41,29 +39,6 @@ export class ContactPageComponent implements OnInit {
   }
 
   ngOnInit() { }
-
-/*
-TODO - Think about safe pipe... is it just sticky tape for the UI ?
-Secure the service.
-
-import { DatePipe } from '@angular/common';
-class MyService {
-
-  constructor(private datePipe: DatePipe) {}
-
-  transformDate(date) {
-    new DatePipe().transform(myDate, 'yyyy-MM-dd');
-    this.datePipe.transform(myDate, 'yyyy-MM-dd');
-  }
-}
-export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
-  return (control: AbstractControl): {[key: string]: any} => {
-    const forbidden = nameRe.test(control.value);
-    return forbidden ? {'forbiddenName': {value: control.value}} : null;
-  };
-}
-forbiddenNameValidator(/bob/i) // <-- Here's how you pass in the custom validator
-*/
 
   sendContactForm(contactForm: FormGroup): void {
     this.hasError = false;

@@ -22,6 +22,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { ReturnSectionComponent } from './return-section/return-section.component';
 import { FooterComponent } from './footer/footer.component';
+import { TestimonialsPageComponent } from './testimonials-page/testimonials-page.component';
 
 
 @NgModule({
@@ -36,8 +37,8 @@ import { FooterComponent } from './footer/footer.component';
     ContactPageComponent,
     NotFoundPageComponent,
     ReturnSectionComponent,
-    FooterComponent
-,
+    FooterComponent,
+    TestimonialsPageComponent,
     PricesPageComponent
 ],
   imports: [

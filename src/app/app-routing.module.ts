@@ -11,6 +11,7 @@ import { PricesPageComponent } from './prices-page/prices-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { TestimonialsPageComponent } from './testimonials-page/testimonials-page.component';
 
 const appRoutes: Routes = [{
   path: 'welcome',
@@ -29,6 +30,12 @@ const appRoutes: Routes = [{
   component: GalleryPageComponent,
   data: {
     title: 'Gallery'
+  }
+}, {
+  path: 'testimonials',
+  component: TestimonialsPageComponent,
+  data: {
+    title: 'Testimonials'
   }
 }, {
   path: 'prices',

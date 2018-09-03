@@ -1,0 +1,55 @@
+.top-margin {
+  margin-top: 40px;
+}
+
+.user-icon {
+  border: 5px solid white;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  -webkit-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+}
+
+.caroline {
+  background-image:url("../../assets/images/caroline.jpg");
+  background-size: cover;
+}
+
+.user-text {
+  font-size: 16px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.location {
+  font-size: 14px;
+  color: #555555;
+}
+
+.top-margin-mobile, {
+  margin-top: 30px;
+}
+
+.bottom-margin-mobile {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .top-margin-mobile {
+    margin-top: 0;
+  }
+
+  .bottom-margin-mobile {
+    margin-bottom: 0;
+  }
+
+  .user-name {
+    margin-top: 50px;
+  }
+}
+
