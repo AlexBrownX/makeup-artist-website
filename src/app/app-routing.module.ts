@@ -94,7 +94,10 @@ export class AppRoutingModule {
         filter((route) => route.outlet === 'primary'),
         mergeMap((route) => route.data)
       )
-      .subscribe((event) => this.titleService.setTitle(event['title']));
+      .subscribe((event) => {
+        this.titleService.setTitle(event['title']);
+        window.scrollTo(0, 0);
+      });
   }
 }
 
