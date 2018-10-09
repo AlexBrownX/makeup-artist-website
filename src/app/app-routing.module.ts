@@ -80,24 +80,51 @@ export class AppRoutingModule {
     this.listenToRouteChanges();
   }
 
-  // https://toddmotto.com/dynamic-page-titles-angular-2-router-events
   listenToRouteChanges() {
     this.router.events.pipe(
         filter((event) => event instanceof NavigationEnd),
-        map(() => this.activatedRoute),
-        map((route) => {
-          while (route.firstChild) {
-            route = route.firstChild;
-          }
-          return route;
+        map((event) => {
+          return {'route': this.activatedRoute, 'event': event};
         }),
-        filter((route) => route.outlet === 'primary'),
-        mergeMap((route) => route.data)
+        map((routeAndEvent) => {
+          while (routeAndEvent.route.firstChild) {
+            routeAndEvent.route = routeAndEvent.route.firstChild;
+          }
+          return {'route': routeAndEvent.route, 'event': routeAndEvent.event};
+        }),
+        filter((routeAndEvent) => routeAndEvent.route.outlet === 'primary'),
+        mergeMap((routeAndEvent) => {
+          return routeAndEvent.route.data.pipe(
+            map(routeData => {
+              return {'data': routeData, 'event': routeAndEvent.event};
+            })
+          );
+        })
       )
-      .subscribe((event) => {
-        this.titleService.setTitle(event['title']);
-        window.scrollTo(0, 0);
+      .subscribe((routeAndEvent) => {
+        this.setPageTitle(routeAndEvent.data['title']);
+        this.scrollTopOfWindow();
+        this.sendAnalyticsPageEvent(routeAndEvent.event['urlAfterRedirects']);
       });
   }
-}
 
+  private setPageTitle(title: string): void {
+    this.titleService.setTitle(title);
+  }
+
+  private scrollTopOfWindow(): void {
+    window.scrollTo(0, 0);
+  }
+
+  // TODO - Refactor into analytics service
+  private sendAnalyticsPageEvent(urlAfterRedirects: string): void {
+    if ('ga' in window) {
+      const tracker = (<any>window).ga.getAll()[0];
+
+      if (tracker) {
+        tracker.set('page', urlAfterRedirects);
+        tracker.send('pageview');
+      }
+    }
+  }
+}

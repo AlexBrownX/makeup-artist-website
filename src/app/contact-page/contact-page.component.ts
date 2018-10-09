@@ -44,6 +44,8 @@ export class ContactPageComponent implements OnInit {
     this.hasError = false;
     this.isSubmitting = true;
 
+    this.sendButtonClickEvent('contact-form-submit');
+
     this.http
     .post<any>(this.dbEndpoint, contactForm.value)
     .subscribe(
@@ -64,5 +66,14 @@ export class ContactPageComponent implements OnInit {
         }
       }
     );
+  }
+
+  private sendButtonClickEvent(eventName: string): void {
+    if ('ga' in window) {
+      const tracker = (<any>window).ga.getAll()[0];
+      if (tracker) {
+        tracker.send('event', 'userInteraction', 'buttonClick', eventName);
+      }
+    }
   }
 }

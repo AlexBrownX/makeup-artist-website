@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-welcome-page',
@@ -11,9 +12,26 @@ export class WelcomePageComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display')   display = 'block';
 
-  constructor() {}
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  public navigateToGallery(): void {
+    this. sendLinkClickEvent('gallery-page');
+    this.router.navigate(['/gallery']);
   }
 
+  public navigateToContact(): void {
+    this.sendLinkClickEvent('contact-page');
+    this.router.navigate(['/contact']);
+  }
+
+  public sendLinkClickEvent(eventName: string): void {
+    if ('ga' in window) {
+      const tracker = (<any>window).ga.getAll()[0];
+      if (tracker) {
+        tracker.send('event', 'userInteraction', 'linkClick', eventName);
+      }
+    }
+  }
 }

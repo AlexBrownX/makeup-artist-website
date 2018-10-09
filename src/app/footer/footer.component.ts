@@ -13,7 +13,14 @@ export class FooterComponent implements OnInit {
   twitter = globalVars.contact.twitter;
   instagram = globalVars.contact.instagram;
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  public sendLinkClickEvent(eventName: string): void {
+    if ('ga' in window) {
+      const tracker = (<any>window).ga.getAll()[0];
+      if (tracker) {
+        tracker.send('event', 'userInteraction', 'linkClick', eventName);
+      }
+    }
+  }
 }
