@@ -26,7 +26,7 @@ export class WelcomePageComponent implements OnInit {
     this.router.navigate(['/contact']);
   }
 
-  public sendLinkClickEvent(eventName: string): void {
+  private sendLinkClickEvent(eventName: string): void {
     if ('ga' in window) {
       const tracker = (<any>window).ga.getAll()[0];
       if (tracker) {
