@@ -7,8 +7,7 @@ module.exports = {
       'dist/**.svg',
       'dist/**.ico',
       'dist/**.jpg',
-      'dist/assets/images/*',
-      'dist/assets/images/wedding/*',
+      'dist/assets/images/**',
       'dist/assets/fonts/*',
       'dist/assets/eye_icon/*'
     ],
@@ -16,4 +15,3 @@ module.exports = {
     stripPrefix: 'dist/',
     navigateFallback: '/index.html'
   };
-  
