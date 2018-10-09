@@ -24,7 +24,7 @@ export interface GalleryDefinition {
     size: String;
 }
 
-export const galleryDefinitions = [
+export const weddingGalleryDefinitions = [
     {
         mainImage: '1a.jpg',
         thumbnailImage: '1c.jpg',
@@ -66,6 +66,90 @@ export const galleryDefinitions = [
         caption: 'Wedding Photo 2017 8',
         size: '1024x681'
     }, {
+        mainImage: '43a.jpg',
+        thumbnailImage: '43c.jpg',
+        caption: 'Wedding Photo 2017 9',
+        size: '681x1024'
+    }, {
+        mainImage: '44a.jpg',
+        thumbnailImage: '44c.jpg',
+        caption: 'Wedding Photo 2017 10',
+        size: '681x1024'
+    }, {
+        mainImage: '45a.jpg',
+        thumbnailImage: '45c.jpg',
+        caption: 'Wedding Photo 2017 11',
+        size: '681x1024'
+    }, {
+        mainImage: '46a.jpg',
+        thumbnailImage: '46c.jpg',
+        caption: 'Wedding Photo 2017 12',
+        size: '681x1024'
+    }, {
+        mainImage: '47a.jpg',
+        thumbnailImage: '47c.jpg',
+        caption: 'Wedding Photo 2017 13',
+        size: '1024x681'
+    }, {
+        mainImage: '48a.jpg',
+        thumbnailImage: '48c.jpg',
+        caption: 'Wedding Photo 2017 14',
+        size: '1024x681'
+    }, {
+        mainImage: '49a.jpg',
+        thumbnailImage: '49c.jpg',
+        caption: 'Wedding Photo 2017 15',
+        size: '1024x681'
+    }, {
+        mainImage: '50a.jpg',
+        thumbnailImage: '50c.jpg',
+        caption: 'Wedding Photo 2018 1',
+        size: '1024x681'
+    }, {
+        mainImage: '51a.jpg',
+        thumbnailImage: '51c.jpg',
+        caption: 'Wedding Photo 2018 2',
+        size: '1024x681'
+    }, {
+        mainImage: '52a.jpg',
+        thumbnailImage: '52c.jpg',
+        caption: 'Wedding Photo 2018 3',
+        size: '1024x681'
+    }, {
+        mainImage: '53a.jpg',
+        thumbnailImage: '53c.jpg',
+        caption: 'Wedding Photo 2018 4',
+        size: '681x1024'
+    }, {
+        mainImage: '54a.jpg',
+        thumbnailImage: '54c.jpg',
+        caption: 'Wedding Photo 2018 5',
+        size: '681x1024'
+    }, {
+        mainImage: '55a.jpg',
+        thumbnailImage: '55c.jpg',
+        caption: 'Wedding Photo 2018 6',
+        size: '681x1024'
+    }, {
+        mainImage: '56a.jpg',
+        thumbnailImage: '56c.jpg',
+        caption: 'Wedding Photo 2018 7',
+        size: '681x1024'
+    }, {
+        mainImage: '57a.jpg',
+        thumbnailImage: '57c.jpg',
+        caption: 'Wedding Photo 2018 8',
+        size: '681x1024'
+    }, {
+        mainImage: '58a.jpg',
+        thumbnailImage: '58c.jpg',
+        caption: 'Wedding Photo 2018 9',
+        size: '681x1024'
+    }
+];
+
+export const bridesGalleryDefinitions = [
+    {
         mainImage: '9a.jpg',
         thumbnailImage: '9c.jpg',
         caption: 'Luisa Bride Photo 2017 1',
@@ -135,7 +219,7 @@ export const galleryDefinitions = [
         thumbnailImage: '22c.jpg',
         caption: 'Charlotte Bride Photo 2018 7',
         size: '681x1021'
-    }, {
+    },  {
         mainImage: '23a.jpg',
         thumbnailImage: '23c.jpg',
         caption: 'Ines Bride Photo 2018 1',
@@ -210,5 +294,34 @@ export const galleryDefinitions = [
         thumbnailImage: '37c.jpg',
         caption: 'Bohemian Bride Photo 2018 10',
         size: '1024x674'
+    }
+];
+
+export const maternityGalleryDefinitions = [
+    {
+        mainImage: '38a.jpg',
+        thumbnailImage: '38c.jpg',
+        caption: 'Caroline Pretty & Pregnant Photo 2018 1',
+        size: '681x1021'
+    }, {
+        mainImage: '39a.jpg',
+        thumbnailImage: '39c.jpg',
+        caption: 'Caroline Pretty & Pregnant Photo 2018 2',
+        size: '681x1021'
+    }, {
+        mainImage: '40a.jpg',
+        thumbnailImage: '40c.jpg',
+        caption: 'Caroline Pretty & Pregnant Photo 2018 3',
+        size: '681x1021'
+    }, {
+        mainImage: '41a.jpg',
+        thumbnailImage: '41c.jpg',
+        caption: 'Caroline Pretty & Pregnant Photo 2018 4',
+        size: '681x1021'
+    }, {
+        mainImage: '42a.jpg',
+        thumbnailImage: '42c.jpg',
+        caption: 'Caroline Pretty & Pregnant Photo 2018 5',
+        size: '681x1021'
     }
 ];

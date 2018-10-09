@@ -8,7 +8,7 @@
 
 import { Component,  AfterViewInit , HostBinding } from '@angular/core';
 import { GalleryDefinition } from '../../globals';
-import { galleryDefinitions } from '../../globals';
+import { weddingGalleryDefinitions, bridesGalleryDefinitions, maternityGalleryDefinitions } from '../../globals';
 import * as photoSwipeLoader from '../photoswipe-loader';
 
 @Component({
@@ -18,10 +18,15 @@ import * as photoSwipeLoader from '../photoswipe-loader';
 })
 export class GalleryPageComponent implements AfterViewInit {
 
-  galleryDefinitions: GalleryDefinition[];
+  weddingGalleryDefinitions: GalleryDefinition[];
+  bridesGalleryDefinitions: GalleryDefinition[];
+  maternityGalleryDefinitions: GalleryDefinition[];
+
 
   constructor() {
-    this.galleryDefinitions = galleryDefinitions;
+    this.weddingGalleryDefinitions = weddingGalleryDefinitions;
+    this.bridesGalleryDefinitions = bridesGalleryDefinitions;
+    this.maternityGalleryDefinitions = maternityGalleryDefinitions;
   }
 
   ngAfterViewInit() {
@@ -29,6 +34,8 @@ export class GalleryPageComponent implements AfterViewInit {
   }
 
   initialisePhotoswipe() {
-    photoSwipeLoader.initPhotoSwipeFromDOM('.my-gallery');
+    photoSwipeLoader.initPhotoSwipeFromDOM('.wedding-gallery');
+    photoSwipeLoader.initPhotoSwipeFromDOM('.brides-gallery');
+    photoSwipeLoader.initPhotoSwipeFromDOM('.maternity-gallery');
   }
 }
