@@ -1,9 +1,25 @@
-.gallery-thumbnail {
-    height: 210px;
-}
+.gallery-thumbnail-wrapper {
+  position: relative;
+  margin: 0 0 20px 0;
+  height: 225px;
 
-.gallery-thumbnail > figcaption {
-    visibility: hidden;
+  .gallery-thumbnail {
+    height: 100%;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.25);
+    -moz-box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.25);
+
+    .thumbnail {
+      object-fit: contain;
+      width: 90%;
+      height: 90%;
+      padding-top: 10px;
+    }
+
+    > figcaption {
+      display: none;
+    }
+  }
 }
 
 .pswp {

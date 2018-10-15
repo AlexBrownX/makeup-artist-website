@@ -6,41 +6,41 @@
   </header>
 
   <main>
-    <div class="row wedding-gallery">
+    <div class="row photo-thumbnail-gallery">
       <h2 class="accent-color vertical-margin-spaced gallery-title text-center">Wonderful Weddings</h2>
-      <div *ngFor="let galleryEntry of weddingGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
+      <div *ngFor="let galleryEntry of weddingGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6 gallery-thumbnail-wrapper">
         <figure class="gallery-thumbnail">
           <a href="./assets/images/wedding/{{galleryEntry.mainImage}}" [attr.data-size]="galleryEntry.size">
-            <img class="img-responsive center-block" src="./assets/images/wedding/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
+            <img class="img-responsive center-block thumbnail" src="./assets/images/wedding/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
           </a>
           <figcaption itemprop="caption description">{{galleryEntry.caption}}</figcaption>
         </figure>
       </div>
     </div>
 
-    <div class="row brides-gallery">
+    <div class="row photo-thumbnail-gallery">
       <h2 class="accent-color vertical-margin-spaced gallery-title text-center">Beautiful Brides</h2>
-      <div *ngFor="let galleryEntry of bridesGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
+      <div *ngFor="let galleryEntry of bridesGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6 gallery-thumbnail-wrapper">
         <figure class="gallery-thumbnail">
           <a href="./assets/images/brides/{{galleryEntry.mainImage}}" [attr.data-size]="galleryEntry.size">
-            <img class="img-responsive center-block" src="./assets/images/brides/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
+            <img class="img-responsive center-block thumbnail" src="./assets/images/brides/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
           </a>
           <figcaption itemprop="caption description">{{galleryEntry.caption}}</figcaption>
         </figure>
       </div>
     </div>
 
-    <div class="row maternity-gallery">
-        <h2 class="accent-color vertical-margin-spaced gallery-title text-center">Pretty &amp; Pregnant</h2>
-        <div *ngFor="let galleryEntry of maternityGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6">
-          <figure class="gallery-thumbnail">
-            <a href="./assets/images/maternity/{{galleryEntry.mainImage}}" [attr.data-size]="galleryEntry.size">
-              <img class="img-responsive center-block" src="./assets/images/maternity/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
-            </a>
-            <figcaption itemprop="caption description">{{galleryEntry.caption}}</figcaption>
-          </figure>
-        </div>
+    <div class="row photo-thumbnail-gallery">
+      <h2 class="accent-color vertical-margin-spaced gallery-title text-center">Pretty &amp; Pregnant</h2>
+      <div *ngFor="let galleryEntry of maternityGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6 gallery-thumbnail-wrapper">
+        <figure class="gallery-thumbnail">
+          <a href="./assets/images/maternity/{{galleryEntry.mainImage}}" [attr.data-size]="galleryEntry.size">
+            <img class="img-responsive center-block thumbnail" src="./assets/images/maternity/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
+          </a>
+          <figcaption itemprop="caption description">{{galleryEntry.caption}}</figcaption>
+        </figure>
       </div>
+    </div>
   </main>`
 </div>
 

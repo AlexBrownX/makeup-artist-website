@@ -34,8 +34,6 @@ export class GalleryPageComponent implements AfterViewInit {
   }
 
   initialisePhotoswipe() {
-    photoSwipeLoader.initPhotoSwipeFromDOM('.wedding-gallery');
-    photoSwipeLoader.initPhotoSwipeFromDOM('.brides-gallery');
-    photoSwipeLoader.initPhotoSwipeFromDOM('.maternity-gallery');
+    photoSwipeLoader.initPhotoSwipeFromDOM('.photo-thumbnail-gallery');
   }
 }
