@@ -1,65 +1,65 @@
 header {
-    text-align: center;
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 20px;
+  text-align: center;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .primary-title {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    line-height: 3.5rem;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
 }
 
 .secondary-title {
-    margin: 0;
-    padding: 0;    
-    font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
 }
 
 .welcome-image {
-    height: 200px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .welcome-image-one {
-    background: url("../../assets/images/mobile_welcome_1.jpg") no-repeat;
-    background-position: 50% 5%;
-    background-size: cover;
+  background: url("../../assets/images/mobile_welcome_1.jpg") no-repeat;
+  background-position: 50% 5%;
+  background-size: cover;
 }
 
 .welcome-image-two {
-    background: url("../../assets/images/mobile_welcome_2.jpg") no-repeat;
-    background-position: 50% 31%;
-    background-size: cover;
+  background: url("../../assets/images/mobile_welcome_2.jpg") no-repeat;
+  background-position: 50% 31%;
+  background-size: cover;
 }
 
 .welcome-image-three {
-    background: url("../../assets/images/mobile_welcome_3.jpg") no-repeat;
-    background-position: 50% 20%;
-    background-size: cover;
+  background: url("../../assets/images/mobile_welcome_3.jpg") no-repeat;
+  background-position: 50% 20%;
+  background-size: cover;
 }
 
 @media screen and (min-width: 650px) {
-    .welcome-image {
-        height: 651px;
-    }
+  .welcome-image {
+    height: 651px;
+  }
 
-    .welcome-image-one {
-        background: url("../../assets/images/desktop_welcome_1.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+  .welcome-image-one {
+    background: url("../../assets/images/desktop_welcome_1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-    .welcome-image-two,
-    .welcome-image-three {
-        display: none;
-    }
+  .welcome-image-two,
+  .welcome-image-three {
+    display: none;
+  }
 }
 
 .map-responsive{
