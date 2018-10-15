@@ -17,7 +17,7 @@ const appRoutes: Routes = [{
   path: 'welcome',
   component: WelcomePageComponent,
   data: {
-    title: 'Jana Jurakove Wedding Makeup Artist'
+    title: 'Jana Jurakova Wedding Makeup Artist'
   }
 }, {
   path: 'about-me',
