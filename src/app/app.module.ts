@@ -2,9 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { JsonpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule} from '@angular/fire';
 
 import { SafePipe } from './SafePipe.pipe';
 import { ScriptService } from './script-loader.service';
@@ -46,7 +45,6 @@ import { TestimonialsPageComponent } from './testimonials-page/testimonials-page
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     HttpClientModule,
-    JsonpModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule
