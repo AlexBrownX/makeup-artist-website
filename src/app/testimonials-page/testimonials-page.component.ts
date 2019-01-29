@@ -13,7 +13,14 @@ export class TestimonialsPageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  public sendLinkClickEvent(eventName: string): void {
+    if ('ga' in window) {
+      const tracker = (<any>window).ga.getAll()[0];
+      if (tracker) {
+        tracker.send('event', 'userInteraction', 'linkClick', eventName);
+      }
+    }
+  }
 }
