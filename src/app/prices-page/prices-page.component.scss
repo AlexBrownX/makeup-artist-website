@@ -11,20 +11,31 @@
 
   th,
   td {
-    width: 50%;
+    text-align: left;
   }
 
-  thead {
-    th {
-      text-align: left;
-    }
-  }
 
   tbody {
     th {
       text-align: left;
       font-weight: normal;
 
+    }
+  }
+
+  .price-col {
+    width: 20%;
+
+    @media screen and (min-width: 480px) {
+      width: 40%;
+    }
+  }
+
+  .mobile-align-right {
+    text-align: right;
+
+    @media screen and (min-width: 480px) {
+      text-align: left;
     }
   }
 }
