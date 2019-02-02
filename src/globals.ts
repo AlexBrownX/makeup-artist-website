@@ -300,3 +300,62 @@ export const maternityGalleryDefinitions = [
     size: '681x1021'
   }
 ];
+
+export const henpartyGalleryDefinitions = [
+  {
+    mainImage: '1a.jpg',
+    thumbnailImage: '1b.jpg',
+    caption: 'Hen Party Preparation 1',
+    size: '1024x768'
+  }, {
+    mainImage: '2a.jpg',
+    thumbnailImage: '2b.jpg',
+    caption: 'Hen Party Preparation 2',
+    size: '1024x768'
+  }, {
+    mainImage: '3a.jpg',
+    thumbnailImage: '3b.jpg',
+    caption: 'Hen Party Preparation 3',
+    size: '1024x768'
+  }, {
+    mainImage: '4a.jpg',
+    thumbnailImage: '4b.jpg',
+    caption: 'Hen Party Makeup 1',
+    size: '1024x768'
+  }, {
+    mainImage: '5a.jpg',
+    thumbnailImage: '5b.jpg',
+    caption: 'Hen Party Makeup 2',
+    size: '1024x768'
+  }, {
+    mainImage: '6a.jpg',
+    thumbnailImage: '6b.jpg',
+    caption: 'Hen Party Makeup 3',
+    size: '1024x768'
+  }, {
+    mainImage: '7a.jpg',
+    thumbnailImage: '7b.jpg',
+    caption: 'Hen Party Makeup 4',
+    size: '1024x768'
+  }, {
+    mainImage: '8a.jpg',
+    thumbnailImage: '8b.jpg',
+    caption: 'Hen Party Makeup 5',
+    size: '1024x768'
+  }, {
+    mainImage: '9a.jpg',
+    thumbnailImage: '9b.jpg',
+    caption: 'Hen Party Makeup 6',
+    size: '1024x814'
+  }, {
+    mainImage: '10a.jpg',
+    thumbnailImage: '10b.jpg',
+    caption: 'Hen Party Makeup 7',
+    size: '1024x761'
+  }, {
+    mainImage: '11a.jpg',
+    thumbnailImage: '11b.jpg',
+    caption: 'Hen Party Makeup 8',
+    size: '1024x768'
+  }
+];

@@ -6,9 +6,14 @@
 //   @HostBinding('@routeAnimation') routeAnimation = true;
 //   @HostBinding('style.display') display = 'block';
 
-import { Component,  AfterViewInit , HostBinding } from '@angular/core';
-import { GalleryDefinition } from '../../globals';
-import { weddingGalleryDefinitions, bridesGalleryDefinitions, maternityGalleryDefinitions } from '../../globals';
+import { Component,  AfterViewInit } from '@angular/core';
+import {
+  GalleryDefinition,
+  weddingGalleryDefinitions,
+  bridesGalleryDefinitions,
+  maternityGalleryDefinitions,
+  henpartyGalleryDefinitions
+} from '../../globals';
 import * as photoSwipeLoader from '../photoswipe-loader';
 
 @Component({
@@ -21,12 +26,13 @@ export class GalleryPageComponent implements AfterViewInit {
   weddingGalleryDefinitions: GalleryDefinition[];
   bridesGalleryDefinitions: GalleryDefinition[];
   maternityGalleryDefinitions: GalleryDefinition[];
-
+  henpartyGalleryDefinitions: GalleryDefinition[];
 
   constructor() {
     this.weddingGalleryDefinitions = weddingGalleryDefinitions;
     this.bridesGalleryDefinitions = bridesGalleryDefinitions;
     this.maternityGalleryDefinitions = maternityGalleryDefinitions;
+    this.henpartyGalleryDefinitions = henpartyGalleryDefinitions;
   }
 
   ngAfterViewInit() {
