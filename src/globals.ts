@@ -269,6 +269,11 @@ export const bridesGalleryDefinitions = [
     thumbnailImage: '24c.jpg',
     caption: 'Simona 2018 2',
     size: '681x1021'
+  }, {
+    mainImage: '25a.jpg',
+    thumbnailImage: '25c.jpg',
+    caption: 'Yaasmin 2019 1',
+    size: '683x1024'
   }
 ];
 
