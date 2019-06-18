@@ -44,10 +44,22 @@
 
     <div class="row photo-thumbnail-gallery">
       <h2 class="accent-color vertical-margin-spaced gallery-title text-center">Hen Parties</h2>
-      <div *ngFor="let galleryEntry of henpartyGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6 gallery-thumbnail-wrapper">
+      <div *ngFor="let galleryEntry of henPartyGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6 gallery-thumbnail-wrapper">
         <figure class="gallery-thumbnail">
           <a href="./assets/images/henparty/{{galleryEntry.mainImage}}" [attr.data-size]="galleryEntry.size">
             <img class="img-responsive center-block thumbnail" src="./assets/images/henparty/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
+          </a>
+          <figcaption itemprop="caption description">{{galleryEntry.caption}}</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="row photo-thumbnail-gallery">
+      <h2 class="accent-color vertical-margin-spaced gallery-title text-center">Royal Ascot</h2>
+      <div *ngFor="let galleryEntry of royalAscotGalleryDefinitions" class="col-lg-3 col-sm-4 col-ms-6 col-xs-6 gallery-thumbnail-wrapper">
+        <figure class="gallery-thumbnail">
+          <a href="./assets/images/royalascot/{{galleryEntry.mainImage}}" [attr.data-size]="galleryEntry.size">
+            <img class="img-responsive center-block thumbnail" src="./assets/images/royalascot/{{galleryEntry.thumbnailImage}}" alt="{{galleryEntry.caption}}" />
           </a>
           <figcaption itemprop="caption description">{{galleryEntry.caption}}</figcaption>
         </figure>

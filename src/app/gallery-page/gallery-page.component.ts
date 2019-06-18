@@ -12,7 +12,8 @@ import {
   weddingGalleryDefinitions,
   bridesGalleryDefinitions,
   maternityGalleryDefinitions,
-  henpartyGalleryDefinitions
+  henpartyGalleryDefinitions,
+  royalAscotGalleryDefinitions
 } from '../../globals';
 import * as photoSwipeLoader from '../photoswipe-loader';
 
@@ -26,20 +27,22 @@ export class GalleryPageComponent implements AfterViewInit {
   weddingGalleryDefinitions: GalleryDefinition[];
   bridesGalleryDefinitions: GalleryDefinition[];
   maternityGalleryDefinitions: GalleryDefinition[];
-  henpartyGalleryDefinitions: GalleryDefinition[];
+  henPartyGalleryDefinitions: GalleryDefinition[];
+  royalAscotGalleryDefinitions: GalleryDefinition[];
 
   constructor() {
     this.weddingGalleryDefinitions = weddingGalleryDefinitions;
     this.bridesGalleryDefinitions = bridesGalleryDefinitions;
     this.maternityGalleryDefinitions = maternityGalleryDefinitions;
-    this.henpartyGalleryDefinitions = henpartyGalleryDefinitions;
+    this.henPartyGalleryDefinitions = henpartyGalleryDefinitions;
+    this.royalAscotGalleryDefinitions = royalAscotGalleryDefinitions;
+  }
+
+  static initialisePhotoswipe() {
+    photoSwipeLoader.initPhotoSwipeFromDOM('.photo-thumbnail-gallery');
   }
 
   ngAfterViewInit() {
-    this.initialisePhotoswipe();
-  }
-
-  initialisePhotoswipe() {
-    photoSwipeLoader.initPhotoSwipeFromDOM('.photo-thumbnail-gallery');
+    GalleryPageComponent.initialisePhotoswipe();
   }
 }

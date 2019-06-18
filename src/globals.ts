@@ -274,6 +274,11 @@ export const bridesGalleryDefinitions = [
     thumbnailImage: '25c.jpg',
     caption: 'Yaasmin 2019 1',
     size: '683x1024'
+  }, {
+    mainImage: '26a.jpg',
+    thumbnailImage: '26c.jpg',
+    caption: 'Paulina 2019 1',
+    size: '683x1024'
   }
 ];
 
@@ -362,5 +367,50 @@ export const henpartyGalleryDefinitions = [
     thumbnailImage: '11b.jpg',
     caption: 'Hen Party Makeup 8',
     size: '1024x768'
+  }
+];
+
+
+export const royalAscotGalleryDefinitions = [
+  {
+    mainImage: '1a.jpg',
+    thumbnailImage: '1b.jpg',
+    caption: 'Royal Ascot 1',
+    size: '682x1024'
+  }, {
+    mainImage: '2a.jpg',
+    thumbnailImage: '2b.jpg',
+    caption: 'Royal Ascot 2',
+    size: '682x1024'
+  }, {
+    mainImage: '3a.jpg',
+    thumbnailImage: '3b.jpg',
+    caption: 'Royal Ascot 3',
+    size: '684x1024'
+  }, {
+    mainImage: '4a.jpg',
+    thumbnailImage: '4b.jpg',
+    caption: 'Royal Ascot 4',
+    size: '684x1024'
+  }, {
+    mainImage: '5a.jpg',
+    thumbnailImage: '5b.jpg',
+    caption: 'Royal Ascot 5',
+    size: '1024x1024'
+  }, {
+    mainImage: '6a.jpg',
+    thumbnailImage: '6b.jpg',
+    caption: 'Royal Ascot 6',
+    size: '1024x683'
+  }, {
+    mainImage: '7a.jpg',
+    thumbnailImage: '7b.jpg',
+    caption: 'Royal Ascot 7',
+    size: '1024x709'
+  }, {
+    mainImage: '8a.jpg',
+    thumbnailImage: '8b.jpg',
+    caption: 'Jana Jurakova Makeup and Hair by Dar',
+    size: '1024x683'
   }
 ];
