@@ -11,37 +11,35 @@
 
   <main>
     <div class="welcome-text text-center vertical-margin-spaced">
-      <h2 class="accent-color">Makeup is art!</h2>
-      <p class="padded-text">As a makeup artist I have the power to turn my brides into the most beautiful, confident and happy people on their special day.</p>
+      <div class="row magazine-links border-shadow">
+        <h2 class="accent-color">Makeup is art!</h2>
+        <p class="padded-text">As a makeup artist I have the power to turn my brides into the most beautiful, confident and happy people on their special day.</p>
 
-      <p class="padded-text">I am primarily based in Dorking, Surrey and cover a large area in South East England.</p>
-      <p class="padded-text"><strong>Phone number: </strong><a href="tel:+44729447156" class="padded-text">07429 447156</a></p>
-      <p class="padded-text"><strong>News:</strong> Makeup by Jana on a cover image of <a target="_blank" rel="noopener" (click)="sendLinkClickEvent('news-article')" href="https://www.yoursurrey.wedding/previous-issue/1782"><span class="access">View Your Surrey Wedding Magazine article</span>Your Surrey Wedding Magazine</a>.</p>
+        <p class="padded-text">I am primarily based in Dorking, Surrey and cover a large area in South East England.</p>
+        <p class="padded-text"><strong>Phone number: </strong><a href="tel:+44729447156" class="padded-text">07429 447156</a></p>
+      </div>
 
-      <div class="row magazine-links">
-        <div class="col-md-4 magazine-link">
+      <!-- Navigation buttons -->
+      <div class="row magazine-links border-shadow">
+        <a (click)="navigateToGallery();" class="btn btn-default vertical-margin-spaced">
+          <span>View gallery</span>
+        </a>
+        <a (click)="navigateToContact();" class="btn btn-default vertical-margin-spaced">
+          <span>Contact me</span>
+        </a>
+      </div>
+
+      <!-- Magazines -->
+      <div class="row magazine-links border-shadow">
+        <h2 class="accent-color">News</h2>
+        <p class="padded-text">Makeup by Jana on the cover of <a target="_blank" rel="noopener" (click)="sendLinkClickEvent('news-article')" href="https://www.yoursurrey.wedding/previous-issue/1782"><span class="access">View Your Surrey Wedding Magazine article</span>Your Surrey Wedding Magazine</a> 2019.</p>
+
+        <div class="col-md-12 magazine-link">
           <a target="_blank" rel="noopener" href="https://www.yoursurrey.wedding/previous-issue/1782">
             <img class="your-surrey-wedding-cover" src="./assets/images/Cover2.jpg" alt="Your Surrey Wedding Magazine Cover" />
           </a>
         </div>
-        <div class="col-md-4 magazine-link">
-          <a target="_blank" rel="noopener" href="https://www.yoursurrey.wedding/previous-issue/1775">
-            <img class="your-surrey-wedding-cover" src="./assets/images/Cover.jpg" alt="Your Surrey Wedding Magazine Cover" />
-          </a>
-        </div>
-        <div class="col-md-4 magazine-link">
-          <a target="_blank" rel="noopener" href="https://www.yoursurrey.wedding/previous-issue/1775">
-            <img class="your-surrey-wedding-cover" src="./assets/images/retro_romance.jpg" alt="Your Surrey Wedding Magazine Retro Romance Edition" />
-          </a>
-        </div>
       </div>
-
-      <a (click)="navigateToGallery();" class="btn btn-default vertical-margin-spaced">
-        <span>View gallery</span>
-      </a>
-      <a (click)="navigateToContact();" class="btn btn-default vertical-margin-spaced">
-        <span>Contact me</span>
-      </a>
 
       <div class="map-responsive">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d639688.2675263591!2d-0.8936078222669994!3d51.22308602075035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875e7c060ec40a9%3A0xc24f23a35b56433!2sMakeup+by+Jana!5e0!3m2!1sen!2suk!4v1539635238098" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>

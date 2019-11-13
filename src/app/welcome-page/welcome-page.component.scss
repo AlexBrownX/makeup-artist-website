@@ -51,6 +51,12 @@ header {
   margin-bottom: 20px;
 }
 
+.border-shadow {
+  box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.25);
+  -moz-box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.25);
+}
+
 @media screen and (min-width: 650px) {
   .welcome-image {
     height: 651px;
