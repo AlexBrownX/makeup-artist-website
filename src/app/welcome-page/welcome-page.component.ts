@@ -26,6 +26,12 @@ export class WelcomePageComponent implements OnInit {
     this.router.navigate(['/contact']);
   }
 
+  public navigateToMagazineWork(): void {
+    this.sendLinkClickEvent('magazine-work-page');
+    this.router.navigate(['/magazinework']);
+  }
+
+
   public sendLinkClickEvent(eventName: string): void {
     if ('ga' in window) {
       const tracker = (<any>window).ga.getAll()[0];

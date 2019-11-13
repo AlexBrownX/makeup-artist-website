@@ -22,6 +22,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { ReturnSectionComponent } from './return-section/return-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestimonialsPageComponent } from './testimonials-page/testimonials-page.component';
+import { MagazineWorkPageComponent } from './magazine-work-page/magazine-work-page.component';
 
 
 @NgModule({
@@ -33,11 +34,12 @@ import { TestimonialsPageComponent } from './testimonials-page/testimonials-page
     AboutMePageComponent,
     GalleryPageComponent,
     BlogPageComponent,
+    MagazineWorkPageComponent,
+    TestimonialsPageComponent,
     ContactPageComponent,
     NotFoundPageComponent,
     ReturnSectionComponent,
     FooterComponent,
-    TestimonialsPageComponent,
     PricesPageComponent
 ],
   imports: [

@@ -13,10 +13,12 @@
     <div class="welcome-text text-center vertical-margin-spaced">
       <div class="row magazine-links border-shadow">
         <h2 class="accent-color">Makeup is art!</h2>
-        <p class="padded-text">As a makeup artist I have the power to turn my brides into the most beautiful, confident and happy people on their special day.</p>
+        <div class="main-text-padding">
+          <p class="padded-text">As a makeup artist I have the power to turn my brides into the most beautiful, confident and happy people on their special day.</p>
 
-        <p class="padded-text">I am primarily based in Dorking, Surrey and cover a large area in South East England.</p>
-        <p class="padded-text"><strong>Phone number: </strong><a href="tel:+44729447156" class="padded-text">07429 447156</a></p>
+          <p class="padded-text">I am primarily based in Dorking, Surrey and cover a large area in South East England.</p>
+          <p class="padded-text"><strong>Phone number: </strong><a href="tel:+44729447156" class="padded-text">07429 447156</a></p>
+        </div>
 
         <a (click)="navigateToGallery();" class="btn btn-default vertical-margin-spaced">
           <span>View gallery</span>
@@ -36,6 +38,10 @@
             <img class="your-surrey-wedding-cover" src="./assets/images/Cover2.jpg" alt="Your Surrey Wedding Magazine Cover" />
           </a>
         </div>
+
+        <a (click)="navigateToMagazineWork();" class="btn btn-default vertical-margin-spaced">
+          <span>Check out more magazine work here</span>
+        </a>
       </div>
 
       <div class="map-responsive">

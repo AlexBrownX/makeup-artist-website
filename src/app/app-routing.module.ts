@@ -12,6 +12,7 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { TestimonialsPageComponent } from './testimonials-page/testimonials-page.component';
+import { MagazineWorkPageComponent } from './magazine-work-page/magazine-work-page.component';
 
 const appRoutes: Routes = [{
   path: 'welcome',
@@ -54,6 +55,12 @@ const appRoutes: Routes = [{
   component: ContactPageComponent,
   data: {
     title: 'Contact me'
+  }
+}, {
+  path: 'magazinework',
+  component: MagazineWorkPageComponent,
+  data: {
+    title: 'Magazine Work'
   }
 }, {
   path: '',

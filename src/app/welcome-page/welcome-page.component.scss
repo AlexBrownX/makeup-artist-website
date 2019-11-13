@@ -57,6 +57,16 @@ header {
   -moz-box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.25);
 }
 
+.main-text-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media screen and (min-width: 1024px) {
+    padding-left: inherit;
+    padding-right: inherit;
+  }
+}
+
 @media screen and (min-width: 650px) {
   .welcome-image {
     height: 651px;
